@@ -53,6 +53,8 @@ for (const a of anchors) {
     const file = a.href.split('#')[0];
     const { existsSync } = await import('fs');
     if (!existsSync(path.join(here, file))) issues.push(`DEAD PAGE LINK: ${a.href}`);
+  } else if (a.href.startsWith('mailto:') || a.href.startsWith('tel:')) {
+    if (!/^mailto:[^@\s]+@[^@\s]+\.[^@\s?]+(\?.*)?$/.test(a.href) && a.href.startsWith('mailto:')) issues.push(`MALFORMED MAILTO: ${a.href}`);
   } else if (a.href.startsWith('http')) {
     externals.add(a.href);
     if (a.targetBlank && !a.rel.includes('noopener')) issues.push(`MISSING noopener: ${a.href}`);
