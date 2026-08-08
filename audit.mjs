@@ -82,57 +82,61 @@ issues.push(...domChecks);
 // 4. interactions
 async function expect(cond, label) { if (!(await cond)) issues.push('INTERACTION FAIL: ' + label); }
 
-// interaction checks only apply to pages that have the elements
+// interaction checks — each feature guarded by its own presence
 const hasBuilder = await page.evaluate(() => !!document.getElementById('builderForm'));
 if (hasBuilder) {
-// order builder
-await page.locator('#menu').scrollIntoViewIfNeeded();
-const unagi = page.locator('#builderForm input[data-name="Unagi Berempah"]');
-await unagi.check({ force: true });
-await expect(page.evaluate(() => document.getElementById('builderSum').textContent === '14.40'), 'builder: unagi = 14.40');
-await page.locator('#builderForm input[data-name="Otah Berempah"]').check({ force: true });
-await expect(page.evaluate(() => document.getElementById('builderSum').textContent === '16.22'), 'builder: unagi(14.40) + otah(1.82) = 16.22');
-await expect(page.evaluate(() => {
-  const g = document.getElementById('cutGroup');
-  return [...g.querySelectorAll('input')].every(i => i.disabled);
-}), 'builder: cut disabled for non-ayam');
-await page.locator('#builderForm input[data-name="Ayam Berempah"]').check({ force: true });
-await expect(page.evaluate(() => document.getElementById('builderSum').textContent === '10.82'), 'builder: ayam(9.00) + otah(1.82) = 10.82');
-await expect(page.evaluate(() => document.getElementById('builderDesc').textContent.includes('Ayam Berempah (Thigh)')), 'builder: desc shows ayam with cut');
+  await page.locator('#menu').scrollIntoViewIfNeeded();
+  const unagi = page.locator('#builderForm input[data-name="Unagi Berempah"]');
+  await unagi.check({ force: true });
+  await expect(page.evaluate(() => document.getElementById('builderSum').textContent === '14.40'), 'builder: unagi = 14.40');
+  await page.locator('#builderForm input[data-name="Otah Berempah"]').check({ force: true });
+  await expect(page.evaluate(() => document.getElementById('builderSum').textContent === '16.22'), 'builder: unagi(14.40) + otah(1.82) = 16.22');
+  await expect(page.evaluate(() => {
+    const g = document.getElementById('cutGroup');
+    return [...g.querySelectorAll('input')].every(i => i.disabled);
+  }), 'builder: cut disabled for non-ayam');
+  await page.locator('#builderForm input[data-name="Ayam Berempah"]').check({ force: true });
+  await expect(page.evaluate(() => document.getElementById('builderSum').textContent === '10.82'), 'builder: ayam(9.00) + otah(1.82) = 10.82');
+  await expect(page.evaluate(() => document.getElementById('builderDesc').textContent.includes('Ayam Berempah (Thigh)')), 'builder: desc shows ayam with cut');
+}
 
-// promo
-await expect(page.evaluate(() => {
-  const p = document.querySelector('.lto');
-  return p && !p.hidden && p.textContent.includes('BEREMPAH6');
-}), 'promo visible with BEREMPAH6');
-await expect(page.evaluate(() => {
-  const c = document.querySelector('.lto-count');
-  return c && getComputedStyle(c).display === 'none';
-}), 'promo countdown hidden (evergreen)');
+if (await page.evaluate(() => !!document.querySelector('.lto'))) {
+  await expect(page.evaluate(() => {
+    const p = document.querySelector('.lto');
+    return p && !p.hidden && p.textContent.includes('BEREMPAH6');
+  }), 'promo visible with BEREMPAH6');
+  await expect(page.evaluate(() => {
+    const c = document.querySelector('.lto-count');
+    return c && getComputedStyle(c).display === 'none';
+  }), 'promo countdown hidden (evergreen)');
+}
 
-// FAQ
-const faq = page.locator('.faq-item').first();
-await faq.locator('summary').click();
-await expect(faq.evaluate(el => el.open), 'FAQ opens on click');
+if (await page.evaluate(() => !!document.querySelector('.faq-item'))) {
+  const faq = page.locator('.faq-item').first();
+  await faq.locator('summary').click();
+  await expect(faq.evaluate(el => el.open), 'FAQ opens on click');
+}
 
-// open-now chips (3 cards carry data-hours)
-await expect(page.evaluate(() => document.querySelectorAll('.loc-card .loc-chip.open, .loc-card .loc-chip.closed').length === 3), 'open-now chips rendered for all 3 outlets with hours');
+const hoursCards = await page.evaluate(() => document.querySelectorAll('[data-hours]').length);
+if (hoursCards > 0) {
+  await expect(page.evaluate(n => document.querySelectorAll('.loc-card .loc-chip.open, .loc-card .loc-chip.closed').length === n, hoursCards), `open-now chips rendered for all ${hoursCards} outlets with hours`);
+}
 
-// club form
-await page.locator('#club').scrollIntoViewIfNeeded();
-await page.evaluate(() => localStorage.removeItem('crunchClub'));
-await page.reload({ waitUntil: 'load' });
-await page.locator('#club').scrollIntoViewIfNeeded();
-await page.locator('#clubEmail').fill('not-an-email');
-await page.locator('#clubForm button[type="submit"]').click();
-await expect(page.evaluate(() => document.getElementById('clubError').textContent.length > 0), 'club: invalid email shows error');
-await page.locator('#clubEmail').fill('bro@example.com');
-await page.locator('#clubForm button[type="submit"]').click();
-await expect(page.evaluate(() => document.getElementById('clubStatus').textContent.includes('in the club')), 'club: valid email shows success');
-await expect(page.evaluate(() => {
-  try { const v = JSON.parse(localStorage.getItem('crunchClub')); return v && v.joined === true && !('email' in v); }
-  catch (e) { return false; }
-}), 'club: stores joined flag only, no email');
+if (await page.evaluate(() => !!document.getElementById('clubForm'))) {
+  await page.locator('#club').scrollIntoViewIfNeeded();
+  await page.evaluate(() => localStorage.removeItem('crunchClub'));
+  await page.reload({ waitUntil: 'load' });
+  await page.locator('#club').scrollIntoViewIfNeeded();
+  await page.locator('#clubEmail').fill('not-an-email');
+  await page.locator('#clubForm button[type="submit"]').click();
+  await expect(page.evaluate(() => document.getElementById('clubError').textContent.length > 0), 'club: invalid email shows error');
+  await page.locator('#clubEmail').fill('bro@example.com');
+  await page.locator('#clubForm button[type="submit"]').click();
+  await expect(page.evaluate(() => document.getElementById('clubStatus').textContent.includes('in the club')), 'club: valid email shows success');
+  await expect(page.evaluate(() => {
+    try { const v = JSON.parse(localStorage.getItem('crunchClub')); return v && v.joined === true && !('email' in v); }
+    catch (e) { return false; }
+  }), 'club: stores joined flag only, no email');
 }
 
 // mobile nav + overflow at 3 widths

@@ -397,12 +397,6 @@
   }
   @media (max-width:720px){
     section{padding:var(--s6) 0}
-    .nav-links{
-      display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);
-      border-bottom:2px solid var(--ink);flex-direction:column;padding:var(--s3);gap:var(--s2);
-    }
-    .nav-links.open{display:flex}
-    .nav-toggle{display:block}
     .menu-grid,.loc-grid{grid-template-columns:1fr}
     .hero-inner{padding-top:120px}
     .hero-photo{background:url("hero-mobile.webp") center 32%/cover no-repeat, #2A1708}
@@ -645,3 +639,52 @@
   .teaser-grid a{transition:transform .2s ease,box-shadow .2s ease}
   .teaser-grid a:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--turmeric)}
   @media (max-width:900px){.teaser-grid{grid-template-columns:1fr}}
+
+  /* ================= SUBPAGE MASTHEAD ================= */
+  .masthead{border-bottom:2px solid var(--ink);background:var(--paper-2);padding:var(--s6) 0 var(--s5);text-align:center}
+  .masthead h1 em{font-style:normal}
+
+  /* ================= CAREERS ================= */
+  .roles-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+  .roles-list li{
+    background:#fff;border:2px solid var(--ink);padding:14px 18px;
+    font-family:var(--font-display);font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase;
+  }
+
+  /* ================= CONTACT ================= */
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin-top:var(--s5)}
+  .contact-card{background:#fff;border:2px solid var(--ink);padding:var(--s4);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+  .contact-card h3{font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em}
+  .contact-card p{color:var(--ink-70);font-size:.95rem;flex:1}
+  .contact-card:hover{box-shadow:6px 6px 0 var(--turmeric)}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+  /* ================= HOME: PHILOSOPHY / MEET BROS ================= */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
+  .pillar{background:#fff;border:2px solid var(--ink);padding:var(--s4);position:relative}
+  .pillar:hover{box-shadow:7px 7px 0 var(--chili)}
+  .pillar h3{font-size:1.25rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:12px}
+  .pillar p{color:var(--ink-70);font-size:.95rem;margin-bottom:10px}
+  .pillar p:last-child{margin-bottom:0}
+  .pillar .hand{font-size:1.35rem;color:var(--chili)}
+  @media (max-width:900px){.pillars{grid-template-columns:1fr}}
+  .meet-bros{background:var(--ink);color:var(--paper);text-align:center;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .meet-bros .kicker{color:var(--turmeric);justify-content:center}
+  .meet-bros .kicker::before{background:var(--turmeric)}
+  .meet-bros img{width:min(360px,70vw);margin:0 auto var(--s3)}
+  .meet-bros h2{color:var(--paper);font-size:clamp(2.2rem,5vw,3.6rem)}
+  .meet-bros p{color:#CDB995;max-width:36rem;margin:var(--s3) auto 0}
+  .meaning{background:var(--paper-2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .meaning blockquote{font-family:var(--font-hand);font-weight:600;font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--chili);transform:rotate(-1deg);margin:var(--s4) 0}
+
+  /* nav collapses earlier now that it carries 7 items */
+  @media (max-width:960px){
+    .nav-links{
+      display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);
+      border-bottom:2px solid var(--ink);flex-direction:column;padding:var(--s3);gap:var(--s2);
+      z-index:90;
+    }
+    .nav-links.open{display:flex}
+    .nav-toggle{display:block}
+  }
+  @media (min-width:901px){.pillars-2{grid-template-columns:repeat(2,1fr)}}

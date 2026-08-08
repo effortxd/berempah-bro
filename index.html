@@ -46,7 +46,6 @@
 </head>
 <body>
 
-<!-- film grain -->
 <svg class="grain" aria-hidden="true" width="100%" height="100%">
   <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.11 0 0 0 0 0.06 0 0 0 0 0.02 0 0 0 0.06 0"/></filter>
   <rect width="100%" height="100%" filter="url(#n)"/>
@@ -56,7 +55,7 @@
 
 <header>
   <div class="container nav">
-    <a class="logo" href="#top" aria-label="Berempah Bros home">
+    <a class="logo" href="index.html" aria-label="Berempah Bros home">
       <span class="logo-badge" aria-hidden="true"><img src="assets/logo-mark.webp" alt="" style="width:100%;height:100%;object-fit:contain;padding:3px"></span>
       <span>
         <span class="logo-word">BEREMPAH <em>BROS</em></span>
@@ -65,12 +64,13 @@
     </a>
     <nav aria-label="Main navigation">
       <ul class="nav-links" id="navLinks">
-        <li><a href="#story">Story</a></li>
-        <li><a href="#build">The Build</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="#locations">Find Us</a></li>
-        <li><a class="btn btn-chili" href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">Order</a></li>
+        <li><a href="index.html" aria-current="page" style="color:var(--chili)">Home</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-chili" href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">Order Now</a></li>
       </ul>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
@@ -97,17 +97,15 @@
 
     <div class="container hero-inner">
       <span class="hand hero-tag">wah, die die must try lah!</span>
+      <p style="font-family:var(--font-display);font-size:clamp(1.1rem,2.5vw,1.6rem);letter-spacing:.14em;color:#F0E2C4;text-transform:uppercase">Berempah Bros</p>
       <h1 id="hero-title">Spice. Crunch.<span class="line2">Shiok.</span></h1>
-      <p style="max-width:38rem;font-size:1.15rem;color:#F0E2C4;margin:18px 0 28px">
-        Ayam goreng berempah, reinvented — 16 spices, marinated overnight, fried to a craggy crunch
-        and buried under garlic–kerisik–sakura ebi crumbs. From the MasterChef kitchen to your hawker plate.
-      </p>
+      <p style="max-width:38rem;font-size:1.15rem;color:#F0E2C4;margin:18px 0 28px">Born in Singapore. Inspired by the flavours we grew up with. Made for people who just want damn good food.</p>
       <div class="hero-ctas">
+        <a class="btn btn-paper" href="story.html">Our Story</a>
         <a class="btn btn-chili" href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">
-          Order Delivery
+          Order Now
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a class="btn btn-paper" href="#menu">See Menu</a>
       </div>
       <div class="hero-strip">
         <div><b>16</b>spices in the rempah</div>
@@ -134,661 +132,129 @@
     </div>
   </div>
 
-  <!-- ============ STORY ============ -->
+
+  <!-- ============ WHAT DOES BEREMPAH MEAN ============ -->
+  <section class="meaning" aria-labelledby="meaning-title">
+    <div class="container" style="max-width:820px">
+      <div class="reveal">
+        <span class="kicker">The Name</span>
+        <h2 id="meaning-title" style="font-size:clamp(2.2rem,5vw,3.6rem);margin:var(--s2) 0 var(--s3)">What Does "Berempah" Mean?</h2>
+        <p style="color:var(--ink-70);margin-bottom:14px"><b style="color:var(--ink)">Berempah means spiced</b> — food packed with rempah, aromatics and flavour.</p>
+        <p style="color:var(--ink-70);margin-bottom:14px">But to us, it means a little more than that.</p>
+        <blockquote>it means food that isn't shy.</blockquote>
+        <p style="color:var(--ink-70);margin-bottom:14px">Fragrant spices. Crispy bits. Fiery sambal. Rich coconut rice. Smoke from the grill. The kind of food where every part of the plate is fighting to be your favourite bite.</p>
+        <p style="color:var(--ink)"><b>That's Berempah Bros.</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR STORY (TEASER) ============ -->
   <section id="story" aria-labelledby="story-title">
     <div class="container story-grid">
       <div class="reveal">
-        <span class="kicker">The Story</span>
-        <h2 id="story-title">MasterChef Fame,<br>Hawker Game</h2>
-        <p><b>Derek Cheong won MasterChef Singapore Season 2</b> — then traded the studio kitchen for a hawker stall at Beauty World Food Centre, chasing one obsession: pushing ayam goreng berempah further than anyone thought a hawker plate could go.</p>
-        <p>Every cut is massaged with a rempah of <b>sixteen spices</b> — turmeric, cumin, coriander and thirteen friends — and left to marinate overnight. Fried to order. Then the signature move: a shower of <b>fried garlic, breadcrumbs, kerisik and Japanese sakura ebi</b>. Prawn cereal meets typhoon-shelter crab, on coconut rice.</p>
-        <p>One stall became six, across two brands — Berempah Bros and sister stall <b>Gepuk Guys</b>. Same fire, same crunch, every single plate.</p>
-        <div class="chef-note">
-          <span class="avatar" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1C1006" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
-          </span>
-          <div>
-            <p class="q">"One dish, done properly, with a twist you won't find anywhere else."</p>
-            <p class="who">Derek Cheong · @the.rek · Founder</p>
-          </div>
-        </div>
+        <span class="kicker">Our Story</span>
+        <h2 id="story-title">From One Plate<br>Of Nasi Lemak</h2>
+        <p>Berempah Bros started from our love for the food we grew up eating. The flavours of Singapore and Southeast Asia are loud, diverse and unapologetic — sambal, coconut, spices, smoke, char and plenty of rempah.</p>
+        <p>Our starting point was the humble plate of nasi lemak. We took everything we loved about it and made it our own: fragrant coconut rice, punchy sambal, refreshing achar and, at the centre of it all, our signature <b>Ayam Berempah</b>.</p>
+        <p><b>Take familiar flavours. Put our spin on them. And make food we'd happily eat ourselves.</b></p>
+        <p style="margin-top:var(--s3)"><a class="btn btn-chili" href="story.html">Read Our Story</a></p>
       </div>
       <div class="polaroid-stack reveal">
         <div class="polaroid main">
           <span class="tape" aria-hidden="true"></span>
-          <img src="assets/stall.webp" srcset="assets/sm/stall.webp 800w, assets/stall.webp 1280w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="The Berempah Bros stall at the hawker centre, warm lights and steam rising from the fryer" loading="lazy">
+          <img src="assets/stall.webp" srcset="assets/sm/stall.webp 800w, assets/stall.webp 1280w" sizes="(max-width: 720px) 92vw, 46vw" alt="Two plates of ayam berempah on the table at a Berempah Bros stall" loading="lazy">
           <span class="cap">the stall, somewhere past dinner rush</span>
         </div>
         <div class="polaroid small">
-          <img src="assets/crunch.webp" srcset="assets/sm/crunch.webp 800w, assets/crunch.webp 1024w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Extreme close-up of the crispy spiced chicken crust with garlic and sakura ebi crumbs" loading="lazy">
+          <img src="assets/crunch.webp" srcset="assets/sm/crunch.webp 800w, assets/crunch.webp 1024w" sizes="30vw" alt="Macro close-up of the signature crunch topping" loading="lazy">
           <span class="cap">the crunch™</span>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="timeline reveal" aria-label="Brand timeline">
-        <div class="tl-item hot">
-          <span class="tl-year">2021</span>
-          <p><b>The trophy.</b> Derek Cheong — a 23-year-old engineering undergrad and the season's youngest cook — wins MasterChef Singapore Season 2.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-year">Jan 2026</span>
-          <p><b>The first stall.</b> Berempah Bros opens at Beauty World Food Centre. The queues start almost immediately.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-year">Early 2026</span>
-          <p><b>Northside.</b> Stall No. 2 fires up at Bukit Canberra Hawker Centre, Sembawang.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-year">Apr 2026</span>
-          <p><b>Heartlands.</b> No. 3 lands at Happy Hawkers, Sengkang — next to Ranggung LRT.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-year">Jun 2026</span>
-          <p><b>Number four.</b> Woodleigh Village Hawker Centre joins the family.</p>
-        </div>
-        <div class="tl-item hot">
-          <span class="tl-year">Jul 2026</span>
-          <p><b>New brand energy.</b> Sister stall <b>Gepuk Guys</b> launches at Bedok — Indonesian-inspired gepuk with cashew sambal. No pork, no lard.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-year">Today</span>
-          <p><b>Six stalls, two brands, one obsession.</b> Same rempah standards at every counter.</p>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- ============ THE BUILD ============ -->
-  <section class="build" id="build" aria-labelledby="build-title">
+  <!-- ============ PHILOSOPHY ============ -->
+  <section aria-labelledby="philosophy-title" style="padding-top:0">
     <div class="container">
       <div class="reveal" style="max-width:44rem;margin-bottom:var(--s5)">
-        <span class="kicker">Anatomy of the Plate</span>
-        <h2 id="build-title">Built in Four Layers</h2>
+        <span class="kicker">Our Philosophy</span>
+        <h2 id="philosophy-title" style="font-size:clamp(2.2rem,5vw,3.6rem);margin-top:var(--s2)">How We Cook</h2>
       </div>
-      <div class="build-grid">
-        <div class="build-photos reveal">
-          <figure>
-            <img src="assets/crunch.webp" srcset="assets/sm/crunch.webp 800w, assets/crunch.webp 1024w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Macro shot of craggy fried crust with crumbs" loading="lazy">
-            <figcaption>zoom in on the crunch</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/sambal.webp" alt="Sambal belachan and achar on a hawker table" loading="lazy">
-            <figcaption>sambal + achar, made in-house</figcaption>
-          </figure>
-          <figure class="wide">
-            <img src="assets/hero.webp" alt="The full ayam berempah plate with coconut rice" loading="lazy">
-            <figcaption>the full build</figcaption>
-          </figure>
-        </div>
-        <div class="reveal">
-          <div class="layer">
-            <span class="layer-num">01</span>
-            <div>
-              <h3>16-Spice Rempah</h3>
-              <p>Turmeric, cumin, coriander and thirteen friends, blended fresh and massaged into every cut. Overnight marinade — no shortcuts.</p>
-            </div>
-          </div>
-          <div class="layer">
-            <span class="layer-num">02</span>
-            <div>
-              <h3>The Signature Crunch</h3>
-              <p>Fried garlic, breadcrumbs, kerisik and sakura ebi. A typhoon-shelter-style shower that makes every bite go off.</p>
-            </div>
-          </div>
-          <div class="layer">
-            <span class="layer-num">03</span>
-            <div>
-              <h3>Coconut Rice</h3>
-              <p>Softly fragrant and fluffy — the quiet foundation, built to soak up sambal.</p>
-            </div>
-          </div>
-          <div class="layer">
-            <span class="layer-num">04</span>
-            <div>
-              <h3>Sambal Belachan &amp; Achar</h3>
-              <p>Tangy-fiery sambal with housemade achar — acid and crunch to balance all that spice and fry.</p>
-            </div>
-          </div>
-        </div>
+      <div class="pillars">
+        <article class="pillar reveal">
+          <h3>Familiar Flavours. Our Way.</h3>
+          <p>We take inspiration from the flavours we know and love across Singapore and Southeast Asia, then give them our own Berempah spin.</p>
+          <p>We're not here to make food complicated.</p>
+          <p><b style="color:var(--ink)">We're here to make it delicious.</b></p>
+        </article>
+        <article class="pillar reveal">
+          <h3>Flavour First. Always.</h3>
+          <p>More aromatics. More rempah. Better sambal. Proper char. Crispy bits in every corner.</p>
+          <p>If there's an opportunity to make something tastier, we'll probably take it. Because at the end of the day, there's really only one question that matters:</p>
+          <p><span class="hand">is it shiok?</span></p>
+        </article>
+        <article class="pillar reveal">
+          <h3>Good Food Is For Everyone.</h3>
+          <p>Great food doesn't need white tablecloths or a special occasion. It can come on a plate of coconut rice in a hawker centre.</p>
+          <p>We bring the same obsession with ingredients, technique and flavour to food that's casual, accessible and meant to be eaten again and again.</p>
+          <p><b style="color:var(--ink)">No fuss. No pretence. Just damn good food.</b></p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ PROMO (LTO) ============ -->
-<section class="lto" id="promo" aria-labelledby="lto-title" hidden>
-  <div class="container">
-    <!-- Live promo: BEREMPAH6 (real first-order code from berempahbros.oddle.me). Edit the PROMO config in the lto script to change or retire it. -->
-    <div class="lto-chit reveal">
-      <span class="lto-stamp" aria-hidden="true">Promo Code</span>
-      <div class="lto-main">
-        <span class="kicker">First-Timer Deal</span>
-        <h2 id="lto-title" class="lto-title">$6 Off Your First Order</h2>
-        <p class="lto-desc">New to the Bros? Code BEREMPAH6 takes $6 off (min. $60 spend) your first delivery order — islandwide at a flat $6.80.</p>
-        <p class="lto-ends"><span data-lto="ends">First order only</span> <span class="hand">— use it lah</span></p>
+  <!-- ============ MEET THE BROS ============ -->
+  <section class="meet-bros" aria-labelledby="bros-title">
+    <div class="container">
+      <div class="reveal">
+        <span class="kicker">Meet The Bros</span>
+        <img src="assets/logo-full.webp" alt="The Berempah Bros mascots — two chickens in batik vests, one holding a drumstick" loading="lazy" style="margin-top:var(--s4)">
+        <h2 id="bros-title">Two Bros. One Mission.</h2>
+        <p><b style="color:var(--paper)">To make your next meal damn shiok.</b></p>
+        <p>The Berempah Bros represent everything we love about our food — bold flavours, big personalities and never taking ourselves too seriously.</p>
+        <p class="hand" style="font-size:1.6rem;color:#FFDFA1;transform:rotate(-2deg)">spice. crunch. shiok.</p>
       </div>
-      <div class="lto-stub">
-        <div class="lto-count" aria-hidden="true">
-          <div class="lto-slot"><span class="lto-num" data-lto="d">--</span><span class="lto-lbl">days</span></div>
-          <span class="lto-colon">:</span>
-          <div class="lto-slot"><span class="lto-num" data-lto="h">--</span><span class="lto-lbl">hrs</span></div>
-          <span class="lto-colon">:</span>
-          <div class="lto-slot"><span class="lto-num" data-lto="m">--</span><span class="lto-lbl">mins</span></div>
+    </div>
+  </section>
+
+  <!-- ============ OUR FOOD (TEASER) ============ -->
+  <section id="food" aria-labelledby="food-title">
+    <div class="container">
+      <div class="reveal" style="display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s4)">
+        <div style="max-width:38rem">
+          <span class="kicker">Our Food</span>
+          <h2 id="food-title" style="font-size:clamp(2.2rem,5vw,3.6rem);margin:var(--s2) 0 var(--s3)">Enough Talking.<br>Time To Makan.</h2>
+          <p style="color:var(--ink-70)">It all starts with our signature Berempah — marinated with aromatics and spices, cooked until beautifully crisp and served alongside fragrant coconut rice, sambal, achar and all the good stuff.</p>
+          <p style="color:var(--ink-70);margin-top:12px">From our signature Ayam Berempah to different proteins, grilled favourites and sides — there's always something worth coming back for.</p>
         </div>
-        <a class="btn btn-gold lto-cta" href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">
-          <span class="lto-cta-txt">Order with BEREMPAH6</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <a class="btn btn-chili" href="menu.html">Explore Our Menu</a>
+      </div>
+      <div class="teaser-grid reveal">
+        <a href="menu.html" style="text-decoration:none;border:2px solid var(--ink);display:block;overflow:hidden;background:#2A1708">
+          <img src="assets/sm/ayam.webp" alt="Ayam Berempah with coconut rice and sambal" loading="lazy" style="width:100%;height:230px;object-fit:cover;display:block">
+        </a>
+        <a href="menu.html" style="text-decoration:none;border:2px solid var(--ink);display:block;overflow:hidden;background:#2A1708">
+          <img src="assets/sm/crunch.webp" alt="The signature crunch topping up close" loading="lazy" style="width:100%;height:230px;object-fit:cover;display:block">
+        </a>
+        <a href="menu.html" style="text-decoration:none;border:2px solid var(--ink);display:block;overflow:hidden;background:#2A1708">
+          <img src="assets/sm/feast.webp" alt="The Feast For 2 party platter" loading="lazy" style="width:100%;height:230px;object-fit:cover;display:block">
         </a>
       </div>
     </div>
-  </div>
-</section>
-
-  <!-- ============ MENU ============ -->
-  <section id="menu" aria-labelledby="menu-title">
-    <div class="container">
-      <div class="menu-head reveal">
-        <div>
-          <span class="kicker">The Menu</span>
-          <h2 id="menu-title" style="font-size:clamp(2.4rem,5vw,4rem);margin-top:var(--s2)">Pick Your Protein</h2>
-        </div>
-        <p>Every set comes with coconut rice, sambal belachan, housemade achar and the signature spice crunch. <span class="hand" style="font-size:1.3rem;color:var(--chili)">simple, bro.</span></p>
-      </div>
-      <div class="menu-grid">
-        <article class="chit reveal">
-          <div class="chit-photo">
-            <img src="assets/ayam.webp" srcset="assets/sm/ayam.webp 800w, assets/ayam.webp 1149w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Ayam Berempah — crispy spiced fried chicken on coconut rice" loading="lazy">
-            <span class="chit-price">$9.00</span>
-          </div>
-          <div class="chit-body">
-            <h3>Ayam Berempah</h3>
-            <p>The signature. Overnight 16-spice marinade, fried golden, buried in crunch. Thigh or breast.</p>
-            <div class="tag-row"><span class="tag best">Bestseller</span><span class="tag hot">Spicy</span></div>
-          </div>
-        </article>
-        <article class="chit reveal">
-          <div class="chit-photo">
-            <img src="assets/pork.webp" srcset="assets/sm/pork.webp 800w, assets/pork.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Pork Berempah — crispy spiced pork on coconut rice" loading="lazy">
-            <span class="chit-price">$10.20</span>
-          </div>
-          <div class="chit-body">
-            <h3>Pork Berempah</h3>
-            <p>Juicy spiced pork with deep rempah flavour and serious crackle — a gepuk-inspired twist.</p>
-            <div class="tag-row"><span class="tag hot">Spicy</span></div>
-          </div>
-        </article>
-        <article class="chit reveal">
-          <div class="chit-photo">
-            <img src="assets/fish.webp" srcset="assets/sm/fish.webp 800w, assets/fish.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Fish Berempah — golden fried fish on coconut rice" loading="lazy">
-            <span class="chit-price">$10.20</span>
-          </div>
-          <div class="chit-body">
-            <h3>Fish Berempah</h3>
-            <p>Flaky fish in a light rempah crust — all the fire and crunch, lighter on its feet.</p>
-            <div class="tag-row"><span class="tag hot">Spicy</span></div>
-          </div>
-        </article>
-        <article class="chit reveal">
-          <div class="chit-photo">
-            <img src="assets/unagi.webp" srcset="assets/sm/unagi.webp 800w, assets/unagi.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Unagi Berempah — glazed eel with spiced crust on coconut rice" loading="lazy">
-            <span class="chit-price">$14.40</span>
-          </div>
-          <div class="chit-body">
-            <h3>Unagi Berempah</h3>
-            <p>The premium plate — briny, buttery unagi meets bold berempah spices.</p>
-            <div class="tag-row"><span class="tag best">Premium</span><span class="tag hot">Spicy</span></div>
-          </div>
-        </article>
-      </div>
-      <div class="addons reveal">
-        <h3>Sides</h3>
-        <span class="addon">Crispy Fried Egg <b>$1.80</b></span>
-        <span class="addon">Begedil <b>$1.80</b></span>
-        <span class="addon">Otah Berempah <b>$2.40</b></span>
-        <span class="addon">Mushroom Berempah <b>$4.20</b></span>
-        <span class="addon">Luncheon Meat <b>$1.45</b></span>
-      </div>
-      <div class="builder reveal" aria-labelledby="builder-title">
-        <h3 id="builder-title">Build Your Order <span class="hand" style="font-size:1.3rem;color:var(--chili)">— confirm plus chop</span></h3>
-        <form class="builder-grid" id="builderForm">
-          <fieldset class="b-group">
-            <legend>Protein</legend>
-            <div class="chip-row" id="proteinRow">
-              <label class="chip"><input type="radio" name="protein" value="9" data-name="Ayam Berempah" checked><span>Ayam $9</span></label>
-              <label class="chip"><input type="radio" name="protein" value="10.2" data-name="Pork Berempah"><span>Pork $10.20</span></label>
-              <label class="chip"><input type="radio" name="protein" value="10.2" data-name="Fish Berempah"><span>Fish $10.20</span></label>
-              <label class="chip"><input type="radio" name="protein" value="14.4" data-name="Unagi Berempah"><span>Unagi $14.40</span></label>
-            </div>
-          </fieldset>
-          <fieldset class="b-group" id="cutGroup">
-            <legend>Chicken Part (Ayam Only)</legend>
-            <div class="chip-row">
-              <label class="chip"><input type="radio" name="cut" value="Thigh" checked><span>Thigh</span></label>
-              <label class="chip"><input type="radio" name="cut" value="Breast"><span>Breast</span></label>
-            </div>
-          </fieldset>
-          <fieldset class="b-group">
-            <legend>Add-Ons</legend>
-            <div class="chip-row">
-              <label class="chip"><input type="checkbox" name="addon" value="1.4" data-name="Crispy Fried Egg"><span>Fried Egg +$1.40</span></label>
-              <label class="chip"><input type="checkbox" name="addon" value="1.4" data-name="Begedil"><span>Begedil +$1.40</span></label>
-              <label class="chip"><input type="checkbox" name="addon" value="1.82" data-name="Otah Berempah"><span>Otah +$1.82</span></label>
-              <label class="chip"><input type="checkbox" name="addon" value="3.16" data-name="Mushroom Berempah"><span>Mushroom +$3.16</span></label>
-            </div>
-          </fieldset>
-        </form>
-        <div class="builder-total">
-          <p class="sum" aria-live="polite">$<span id="builderSum">9.00</span> <small id="builderDesc">Ayam Berempah (Thigh)</small></p>
-          <a class="btn btn-chili" href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">Order This on Oddle</a>
-        </div>
-        <p style="font-size:.82rem;color:var(--ink-70);margin-top:10px">Delivery-menu pricing · + $6.80 islandwide delivery at checkout</p>
-      </div>
-      <p class="menu-note">Prices from our <a href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">delivery menu</a> · stall counter prices may differ · Islandwide delivery $6.80 · Menu includes pork — not halal-certified</p>
-    </div>
   </section>
 
-<!-- ============ CATERING / PARTY TRAYS ============ -->
-<section class="catering" id="catering" aria-labelledby="catering-title">
-  <div class="container">
-    <div class="catering-head">
-      <div class="catering-intro reveal">
-        <span class="kicker">Party Trays &amp; Events</span>
-        <h2 id="catering-title">Feed The Whole Kampung</h2>
-        <p>Office makan day, birthday, family gathering — whatever the occasion, we pack the same <b>16-spice rempah, signature crunch and sambal belachan</b> into trays built for sharing. Fried to order, packed hot, zero shortcuts.</p>
-        <span class="catering-hand">one tray also can, ten trays also can</span>
-      </div>
-      <figure class="catering-photo reveal">
-        <img src="assets/feast.webp" srcset="assets/sm/feast.webp 800w, assets/feast.webp 1361w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="The Berempah Bros Feast For 2 — two crumb-topped proteins, begedil, otah, achar and coconut rice on a rattan tray" loading="lazy">
-        <figcaption>same fryer, just bigger portions</figcaption>
-      </figure>
-    </div>
-
-    <div class="tray-grid">
-      <!-- PLACEHOLDER: edit before launch — tray name, contents and serving size are a concept; confirm with the kitchen -->
-      <article class="tray reveal">
-        <span class="tray-ribbon">Tray 01</span>
-        <h3>Office Makan Day</h3>
-        <span class="feeds">feeds ~8–10 colleagues</span>
-        <ul>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Ayam berempah party tray — thighs &amp; breasts
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Coconut rice for everybody
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Sambal belachan + housemade achar
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Crispy fried eggs, one each
-          </li>
-        </ul>
-        <p class="tray-foot">pantry hero status: unlocked</p>
-      </article>
-
-      <!-- PLACEHOLDER: edit before launch — tray name, contents and serving size are a concept; confirm with the kitchen -->
-      <article class="tray reveal">
-        <span class="tray-ribbon">Tray 02</span>
-        <h3>Birthday Ayam Tower</h3>
-        <span class="feeds">feeds ~10–12 party people</span>
-        <ul>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            A stacked tower of ayam berempah — thigh &amp; breast
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Begedil + otah berempah on the side
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Coconut rice + sambal belachan
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Extra tub of spice crunch for sprinkling
-          </li>
-        </ul>
-        <p class="tray-foot">better than cake. we said it.</p>
-      </article>
-
-      <!-- PLACEHOLDER: edit before launch — tray name, contents and serving size are a concept; confirm with the kitchen -->
-      <article class="tray reveal">
-        <span class="tray-ribbon">Tray 03</span>
-        <h3>Kampung Feast</h3>
-        <span class="feeds">feeds ~15–20 pax, whole kampung</span>
-        <ul>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            All four proteins — ayam, pork, fish &amp; unagi berempah
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Begedil, otah berempah + crispy fried eggs
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Coconut rice, sambal belachan + achar
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.29"/></svg>
-            Double crunch topping, obviously
-          </li>
-        </ul>
-        <p class="tray-foot">the full send. confirm shiok.</p>
-      </article>
-    </div>
-
-    <div class="catering-cta reveal">
-      <h3>Makan Day Settled, Bro</h3>
-      <p class="cta-line">DM us on Instagram with your date, headcount and venue — we'll sort the rest.</p>
-      <div class="cta-row">
-        <a class="btn btn-gold" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          DM Us On Instagram
-        </a>
-        <a class="btn btn-paper" href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">
-          Group Orders On Oddle
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-      <p class="lead-note">Straight talk: trays are fried to order, so <b>lead time and availability are confirmed via DM</b> before anything is locked in. Smaller group makan? The real <b>Berempah Bros Feast For 2</b> platter (S$25.80 — two proteins, begedil, otah, mushroom berempah, rice, sambal, achar &amp; crunch) is live on Oddle right now.</p>
-    </div>
-  </div>
-</section>
-
-  <!-- ============ FAQ ============ -->
-  <section id="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <!-- ============ LOCATIONS (TEASER) ============ -->
+  <section aria-labelledby="loc-teaser-title" style="padding-top:0">
     <div class="container">
-      <div class="reveal" style="text-align:center;max-width:44rem;margin:0 auto var(--s5)">
-        <span class="kicker" style="justify-content:center">Good Questions</span>
-        <h2 id="faq-title" style="font-size:clamp(2.4rem,5vw,4rem);margin-top:var(--s2)">Before You Ask, Bro</h2>
-      </div>
-      <div class="faq-list reveal">
-        <details class="faq-item">
-          <summary>What exactly is "berempah"? <span class="plus" aria-hidden="true">+</span></summary>
-          <p class="a">"Berempah" is Malay for "spiced". Traditional ayam goreng berempah is fried chicken marinated in a rempah — a fresh-ground spice paste. Ours uses sixteen spices, rests overnight, and gets finished with a crunch topping you won't find at any other stall.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Is Berempah Bros halal? <span class="plus" aria-hidden="true">+</span></summary>
-          <p class="a">We're not halal-certified — the Berempah Bros menu includes a pork dish, and proteins share the same fryers. Sister stall <b>Gepuk Guys</b> (Bedok) uses no pork and no lard, though it isn't certified either. We get asked this a lot and we'd rather be upfront about it.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Who's behind this? <span class="plus" aria-hidden="true">+</span></summary>
-          <p class="a">Derek Cheong (@the.rek) — an engineering undergrad who became MasterChef Singapore's youngest champion at 23 (Season 2, 2021). He took the trophy into hawker centres on purpose, building Berempah Bros and sister brand Gepuk Guys into six stalls across the island.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Do you deliver? <span class="plus" aria-hidden="true">+</span></summary>
-          <p class="a">Yes — islandwide via <a href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">Oddle</a>, and foodpanda from selected outlets. Or drop by any of our six stalls; food is always freshest straight from the fryer.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Which cut should I get? <span class="plus" aria-hidden="true">+</span></summary>
-          <p class="a">Thigh if you want it juicy, breast if you like it lean — those are the two cuts on the menu. There is no wrong answer — the 16-spice rempah does the heavy lifting either way.</p>
-        </details>
+      <div class="reveal" style="background:var(--ink);color:var(--paper);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--turmeric);padding:var(--s5) var(--s4);display:flex;align-items:center;justify-content:space-between;gap:var(--s3);flex-wrap:wrap">
+        <div style="max-width:34rem">
+          <h2 id="loc-teaser-title" style="color:var(--paper);font-size:clamp(1.8rem,4vw,2.8rem);text-transform:uppercase">Find Your Nearest Bros.</h2>
+          <p style="color:#CDB995;margin-top:10px">Multiple locations. Same obsession with flavour. View our outlets, opening hours and directions.</p>
+        </div>
+        <a class="btn btn-gold" href="locations.html">Find A Location</a>
       </div>
     </div>
   </section>
-
-  <!-- ============ PRESS ============ -->
-  <section class="press" id="press" aria-labelledby="press-title">
-    <div class="container">
-      <div class="reveal" style="text-align:center;max-width:44rem;margin:0 auto var(--s5)">
-        <span class="kicker" style="justify-content:center">Don't Take Our Word</span>
-        <h2 id="press-title" style="font-size:clamp(2.4rem,5vw,4rem);margin-top:var(--s2)">The Food Blogs Came. They Ate.</h2>
-      </div>
-      <div class="press-grid">
-        <article class="press-card reveal">
-          <span class="mark" aria-hidden="true">"</span>
-          <blockquote>The crumbs reminded me of a lovechild between prawn cereal and HK-style typhoon shelter crab toppings.</blockquote>
-          <cite>DanielFoodDiary — on the signature crumbs</cite>
-        </article>
-        <article class="press-card reveal">
-          <span class="mark" aria-hidden="true">"</span>
-          <blockquote>Crisp and craggy on the outside.</blockquote>
-          <cite>Eatbook.sg, on the ayam — with fluffy coconut rice and well-balanced sambal <span class="score">· 7.5/10</span></cite>
-        </article>
-        <article class="press-card reveal">
-          <span class="mark" aria-hidden="true">"</span>
-          <blockquote>The bold, spice-forward flavours make Berempah Bros a stall worth recommending.</blockquote>
-          <cite>SethLui.com — Bukit Canberra review</cite>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ LOCATIONS ============ -->
-  <section id="locations" aria-labelledby="loc-title">
-    <div class="container">
-      <div class="reveal" style="max-width:44rem;margin-bottom:var(--s6)">
-        <span class="kicker">Find Us</span>
-        <h2 id="loc-title" style="font-size:clamp(2.4rem,5vw,4rem);margin-top:var(--s2)">Six Stalls,<br>Two Brands</h2>
-        <p style="color:var(--ink-70);margin-top:var(--s2)">Four Berempah Bros counters, sister brand Gepuk Guys at Bedok — and one more fresh out the fryer.</p>
-      </div>
-      <div class="loc-grid">
-        <article class="loc-card reveal" data-hours="10:30-20:30">
-          <span class="loc-num">NO. 01 — THE OG</span>
-          <h3>Beauty World Food Centre</h3>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            144 Upper Bukit Timah Road, #04-51, S(588177)
-          </p>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
-            Daily 10:30am – 8:30pm
-          </p>
-          <span class="loc-chip">Beauty World MRT · DT5</span>
-          <span class="loc-chip"><a href="https://www.google.com/maps/search/?api=1&query=Berempah+Bros+Beauty+World+Food+Centre" target="_blank" rel="noopener" style="text-decoration:none">Directions ↗</a></span>
-        </article>
-        <article class="loc-card reveal" data-hours="10:00-20:45">
-          <span class="loc-num">NO. 02</span>
-          <h3>Bukit Canberra Hawker Ctr</h3>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            21 Canberra Link, #01-25, S(756973)
-          </p>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
-            Daily 10:00am – 8:45pm · +65 9058 9674
-          </p>
-          <span class="loc-chip">Sembawang MRT · NS11 Exit D</span>
-          <span class="loc-chip"><a href="https://www.google.com/maps/search/?api=1&query=Berempah+Bros+Bukit+Canberra+Hawker+Centre" target="_blank" rel="noopener" style="text-decoration:none">Directions ↗</a></span>
-        </article>
-        <article class="loc-card reveal">
-          <span class="loc-num">NO. 03</span>
-          <h3>Sengkang — Happy Hawkers</h3>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            267 Compassvale Link, #01-02, Stall 5, S(540267)
-          </p>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +65 9630 3690
-          </p>
-          <span class="loc-chip">Next to Ranggung LRT</span>
-          <span class="loc-chip"><a href="https://www.google.com/maps/search/?api=1&query=Happy+Hawkers+267+Compassvale+Link" target="_blank" rel="noopener" style="text-decoration:none">Directions ↗</a></span>
-        </article>
-        <article class="loc-card reveal">
-          <span class="loc-num">NO. 04</span>
-          <h3>Woodleigh Village Hawker Ctr</h3>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            202C Bidadari Park Drive, S(363202)
-          </p>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-            Woodleigh MRT · NE11
-          </p>
-          <span class="loc-chip">Delivery via foodpanda &amp; Oddle</span>
-          <span class="loc-chip"><a href="https://www.google.com/maps/search/?api=1&query=Woodleigh+Village+Hawker+Centre" target="_blank" rel="noopener" style="text-decoration:none">Directions ↗</a></span>
-        </article>
-        <article class="loc-card reveal" data-hours="10:30-22:30" style="border-color:var(--pandan)">
-          <span class="loc-num" style="background:var(--pandan)">NO. 05 — GEPUK GUYS</span>
-          <h3>Bedok — Jofa Coffeeshop</h3>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            531 Bedok North Street 3, #01-680 Stall 3, S(460531)
-          </p>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
-            Daily 10:30am – 10:30pm
-          </p>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-            Indonesian-style gepuk — Ayam $9.90 · Squid $10.90 · Duck Confit $16.50
-          </p>
-          <span class="loc-chip">No pork, no lard</span>
-          <span class="loc-chip"><a href="https://www.instagram.com/gepukguys.sg/" target="_blank" rel="noopener" style="text-decoration:none">@gepukguys.sg ↗</a></span>
-          <span class="loc-chip"><a href="https://www.google.com/maps/search/?api=1&query=Jofa+Coffeeshop+531+Bedok+North+Street+3" target="_blank" rel="noopener" style="text-decoration:none">Directions ↗</a></span>
-        </article>
-        <!-- PLACEHOLDER: confirm the 6th outlet's brand, address and hours before launch -->
-        <article class="loc-card reveal" style="border-style:dashed">
-          <span class="loc-num" style="background:var(--turmeric);color:var(--ink)">NO. 06 — JUST DROPPED</span>
-          <h3>Newest Stall</h3>
-          <p class="loc-line">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE1E0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-            Fresh from the fryer — location details dropping on Instagram first.
-          </p>
-          <span class="loc-chip"><a href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener" style="text-decoration:none">Watch @berempahbros ↗</a></span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ IG WALL ============ -->
-<section class="igwall" id="gallery" aria-labelledby="gallery-title">
-  <div class="container">
-    <div class="igwall-head reveal">
-      <div>
-        <span class="kicker">The Gram</span>
-        <h2 id="gallery-title">Tag Us Or It Didn't Happen</h2>
-      </div>
-      <!-- PLACEHOLDER: edit before launch -->
-      <p class="hand igwall-note">post your plate, tag us hor — best shots kena reposted, steady lah</p>
-    </div>
-
-    <!-- PLACEHOLDER: edit before launch — swap tiles/captions for real @berempahbros post links -->
-    <div class="igwall-grid reveal">
-      <a class="ig-tile ig-wide" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/stall.webp" srcset="assets/sm/stall.webp 800w, assets/stall.webp 1280w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Dinner rush at the Berempah Bros hawker stall, trays of ayam berempah heading out" loading="lazy">
-        <span class="sr">(opens Instagram in a new tab)</span>
-        <span class="ig-ov" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
-          <span class="ig-tag">#SpiceCrunchShiok</span>
-        </span>
-      </a>
-
-      <a class="ig-tile pol tilt-l" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/crunch.webp" srcset="assets/sm/crunch.webp 800w, assets/crunch.webp 1024w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Macro close-up of the fried garlic, breadcrumb, kerisik and sakura ebi crunch on the chicken crust" loading="lazy">
-        <span class="sr">(opens Instagram in a new tab)</span>
-        <span class="ig-cap" aria-hidden="true">the crunch, no filter</span>
-        <span class="ig-ov" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
-          <span class="ig-tag">#SpiceCrunchShiok</span>
-        </span>
-      </a>
-
-      <a class="ig-tile" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/ayam.webp" srcset="assets/sm/ayam.webp 800w, assets/ayam.webp 1149w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Ayam berempah set with coconut rice and sambal belachan" loading="lazy">
-        <span class="sr">(opens Instagram in a new tab)</span>
-        <span class="ig-ov" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
-          <span class="ig-tag">#SpiceCrunchShiok</span>
-        </span>
-      </a>
-
-      <a class="ig-tile" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/sambal.webp" alt="Top-down shot of housemade sambal belachan and achar" loading="lazy">
-        <span class="sr">(opens Instagram in a new tab)</span>
-        <span class="ig-ov" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
-          <span class="ig-tag">#SpiceCrunchShiok</span>
-        </span>
-      </a>
-
-      <a class="ig-tile pol tilt-r" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/unagi.webp" srcset="assets/sm/unagi.webp 800w, assets/unagi.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Unagi berempah plate finished with the signature spice crunch" loading="lazy">
-        <span class="sr">(opens Instagram in a new tab)</span>
-        <span class="ig-cap" aria-hidden="true">unagi glow-up</span>
-        <span class="ig-ov" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
-          <span class="ig-tag">#SpiceCrunchShiok</span>
-        </span>
-      </a>
-
-      <a class="ig-tile ig-wide" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/hero.webp" alt="Full ayam goreng berempah plate spread on coconut rice" loading="lazy">
-        <span class="sr">(opens Instagram in a new tab)</span>
-        <span class="ig-ov" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
-          <span class="ig-tag">#SpiceCrunchShiok</span>
-        </span>
-      </a>
-    </div>
-
-    <div class="igwall-cta reveal">
-      <a class="btn btn-paper" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        Follow @berempahbros
-      </a>
-    </div>
-  </div>
-</section>
-
-  <!-- ============ CRUNCH CLUB ============ -->
-<section class="club" id="club" aria-labelledby="club-title">
-  <div class="container">
-    <div class="club-grid">
-      <div class="club-copy reveal">
-        <span class="kicker">Crunch Club</span>
-        <h2 id="club-title">Get In The<br>Crunch Club</h2>
-        <p class="club-lede">One email once in a while, <b>zero spam — only sambal.</b> Be first to know when a new stall drops, and first in line when the secret menu goes live. Free to join, no catch one.</p>
-        <div class="club-signup">
-          <form class="club-form" id="clubForm" novalidate>
-            <label class="club-label" for="clubEmail">Your email, bro</label>
-            <div class="club-row">
-              <input class="club-input" type="email" id="clubEmail" name="email" autocomplete="email" placeholder="makan.kaki@example.com" required aria-describedby="clubError clubDemo">
-              <button class="btn btn-chili" type="submit">
-                Join The Club
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </button>
-            </div>
-            <p class="club-error" id="clubError" aria-live="polite"></p>
-          </form>
-          <p class="club-success hand" id="clubStatus" aria-live="polite"></p>
-        </div>
-        <!-- PLACEHOLDER: edit before launch — confirm actual member perks -->
-        <p class="club-fine">Perks: early word on new outlets + secret menu drops before they hit the 'gram.</p>
-        <p class="club-fine club-demo" id="clubDemo">Demo signup — connects to no mailing service yet.</p>
-      </div>
-      <!-- PLACEHOLDER: edit before launch — membership card mock, member number is decorative -->
-      <div class="club-card-wrap reveal" aria-hidden="true">
-        <div class="club-card">
-          <div class="club-card-main">
-            <p class="club-card-brand">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-              Berempah Bros
-            </p>
-            <p class="club-card-title">Crunch <em>Club</em></p>
-            <p class="club-card-member">member no. 0001 — founding bro</p>
-            <div class="club-card-barcode"></div>
-            <p class="club-card-serial">Est. 2026 · SG · #SpiceCrunchShiok</p>
-          </div>
-          <div class="club-card-stub">
-            <span>Admit One Bro</span>
-            <span class="club-punch"></span>
-          </div>
-          <span class="club-notch top"></span>
-          <span class="club-notch bottom"></span>
-        </div>
-        <span class="hand club-scribble">membership card mock — real perks loading</span>
-      </div>
-    </div>
-  </div>
-</section>
 
   <!-- ============ NEWS TEASER ============ -->
   <section id="news-teaser" aria-labelledby="news-teaser-title" style="padding-top:0">
@@ -820,17 +286,40 @@
     </div>
   </section>
 
-  <!-- ============ CTA ============ -->
+
+  <!-- ============ ORDER ONLINE ============ -->
   <section class="cta" aria-labelledby="cta-title">
     <div class="container">
       <h2 id="cta-title">Hungry Already?</h2>
-      <span class="hand">island-wide delivery, straight from the fryer</span>
+      <span class="hand">delivery. pick-up. bulk orders. all through Oddle.</span>
+      <p style="max-width:34rem;margin:0 auto var(--s4);color:#FFE3D6">Get Berempah Bros delivered, order ahead for takeaway or sort out the whole office lunch.</p>
       <div class="cta-btns">
         <a class="btn btn-gold" href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">
-          Order on Oddle
+          Order Now
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a class="btn btn-paper" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">@berempahbros</a>
+        <a class="btn btn-paper" href="menu.html#catering">Bulk Orders</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAREERS + CONTACT (TEASERS) ============ -->
+  <section aria-labelledby="join-title">
+    <div class="container">
+      <div class="pillars pillars-2">
+        <article class="pillar reveal" id="careers">
+          <span class="kicker">Careers</span>
+          <h3 id="join-title" style="margin-top:12px">Join The Bros.</h3>
+          <p>Good food doesn't happen without good people. We're growing, and we're always looking for people who want to grow with us.</p>
+          <p><span class="hand">experience is great. attitude matters more.</span></p>
+          <p style="margin-top:var(--s2)"><a class="btn btn-chili" href="careers.html">View Open Positions</a></p>
+        </article>
+        <article class="pillar reveal" id="contact">
+          <span class="kicker">Contact</span>
+          <h3 style="margin-top:12px">Talk To The Bros.</h3>
+          <p>Got something to say? General enquiries, collaborations, media, business opportunities or anything else Berempah Bros related — get in touch.</p>
+          <p style="margin-top:var(--s2)"><a class="btn btn-paper" href="contact.html">Contact Us</a></p>
+        </article>
       </div>
     </div>
   </section>
@@ -845,39 +334,48 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="logo" href="#top" aria-label="Berempah Bros home" style="text-decoration:none">
+        <a class="logo" href="index.html" aria-label="Berempah Bros home" style="text-decoration:none">
           <span class="logo-badge" aria-hidden="true"><img src="assets/logo-mark.webp" alt="" style="width:100%;height:100%;object-fit:contain;padding:3px"></span>
           <span>
             <span class="logo-word" style="color:#F5EBD8">BEREMPAH <em>BROS</em></span>
             <span class="logo-sub" style="color:#CDB995">Spice · Crunch · Shiok</span>
           </span>
         </a>
-        <p>Ayam berempah with a modern and unique twist, by MasterChef Singapore Season 2 winner Derek Cheong.</p>
+        <p>Born in Singapore. Inspired by the flavours we grew up with. Made for people who just want damn good food.</p>
       </div>
       <div class="foot-col">
         <h4>Explore</h4>
         <ul>
-          <li><a href="#story">Our Story</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#press">Press</a></li>
-          <li><a href="#locations">Locations</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="locations.html">Locations</a></li>
           <li><a href="news.html">News</a></li>
-          <li><a href="#catering">Party Trays</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#club">Crunch Club</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Order &amp; Follow</h4>
+        <h4>Order Online</h4>
         <ul>
-          <li><a href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">Oddle Delivery</a></li>
-          <li><a href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">Instagram @berempahbros</a></li>
-          <li><a href="https://www.instagram.com/gepukguys.sg/" target="_blank" rel="noopener">Sister brand: Gepuk Guys</a></li>
+          <li><a href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">Delivery</a></li>
+          <li><a href="https://berempahbros.oddle.me/" target="_blank" rel="noopener">Self Pick-Up</a></li>
+          <li><a href="menu.html#catering">Bulk Orders</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">Instagram</a></li>
+          <!-- PLACEHOLDER: add real TikTok / Facebook URLs when available
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Facebook</a></li> -->
+          <li><a href="https://www.instagram.com/gepukguys.sg/" target="_blank" rel="noopener">Gepuk Guys</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Berempah Bros. All rights reserved.</span>
+      <span>© 2026 Berempah Bros. All Rights Reserved.</span>
       <span>#SpiceCrunchShiok · Menu includes pork — not halal-certified</span>
     </div>
   </div>
@@ -906,47 +404,6 @@
 
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ===== Order builder =====
-  (function(){
-    const form=document.getElementById('builderForm');
-    const sum=document.getElementById('builderSum');
-    const desc=document.getElementById('builderDesc');
-    const cutGroup=document.getElementById('cutGroup');
-    function update(){
-      const p=form.querySelector('input[name="protein"]:checked');
-      const isAyam=p.dataset.name==='Ayam Berempah';
-      cutGroup.style.opacity=isAyam?'1':'.35';
-      cutGroup.querySelectorAll('input').forEach(i=>i.disabled=!isAyam);
-      let total=parseFloat(p.value);
-      const parts=[p.dataset.name+(isAyam?` (${form.querySelector('input[name="cut"]:checked').value})`:'')];
-      form.querySelectorAll('input[name="addon"]:checked').forEach(a=>{
-        total+=parseFloat(a.value);parts.push(a.dataset.name);
-      });
-      sum.textContent=total.toFixed(2);
-      desc.textContent=parts.join(' + ');
-    }
-    form.addEventListener('change',update);
-    update();
-  })();
-
-  // ===== Open-now chips (Singapore time) =====
-  (function(){
-    try{
-      const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Singapore',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date());
-      const [h,m]=parts.split(':').map(Number);
-      const now=h*60+m;
-      document.querySelectorAll('[data-hours]').forEach(card=>{
-        const [o,c]=card.dataset.hours.split('-');
-        const [oh,om]=o.split(':').map(Number);
-        const [ch,cm]=c.split(':').map(Number);
-        const open=now>=oh*60+om&&now<ch*60+cm;
-        const chip=document.createElement('span');
-        chip.className='loc-chip '+(open?'open':'closed');
-        chip.textContent=open?'● Open now':'● Closed — opens '+o.replace(/^0/,'')+'am';
-        card.appendChild(chip);
-      });
-    }catch(e){/* clock unavailable — skip chips */}
-  })();
 
   // Gentle hero parallax (skipped if reduced motion)
   const heroPhoto=document.getElementById('heroPhoto');
@@ -957,176 +414,6 @@
     },{passive:true});
   }
 
-  // ===== LTO promo =====
-(function(){
-  // Live promo: BEREMPAH6 — real first-order code from berempahbros.oddle.me.
-  // Set active:false to retire, or give endsISO an ISO date to get a countdown back.
-  var PROMO={
-    active:true,
-    title:"$6 Off Your First Order",
-    desc:"New to the Bros? Code BEREMPAH6 takes $6 off (min. $60 spend) your first delivery order \u2014 islandwide at a flat $6.80.",
-    endsISO:null,
-    cta:"Order with BEREMPAH6",
-    url:"https://berempahbros.oddle.me/"
-  };
-
-  function init(){
-    var root=document.querySelector('.lto');
-    if(!root){return;}
-    function hide(){root.hidden=true;root.style.display='none';}
-
-    var ends=PROMO.endsISO?new Date(PROMO.endsISO).getTime():null;
-    if(!PROMO.active||(ends!==null&&(isNaN(ends)||Date.now()>=ends))){hide();return;}
-    root.hidden=false;
-
-    var titleEl=root.querySelector('.lto-title');
-    if(titleEl){titleEl.textContent=PROMO.title;}
-    var descEl=root.querySelector('.lto-desc');
-    if(descEl){descEl.textContent=PROMO.desc;}
-    var ctaEl=root.querySelector('.lto-cta');
-    if(ctaEl){
-      ctaEl.href=PROMO.url;
-      var txt=ctaEl.querySelector('.lto-cta-txt');
-      if(txt){txt.textContent=PROMO.cta;}
-    }
-
-    var countEl=root.querySelector('.lto-count');
-    if(ends===null){
-      if(countEl){countEl.style.display='none';}
-      return; // evergreen — static "First order only" line stands
-    }
-
-    var endsEl=root.querySelector('[data-lto="ends"]');
-    if(endsEl){
-      try{
-        endsEl.textContent='Ends '+new Intl.DateTimeFormat('en-SG',{
-          timeZone:'Asia/Singapore',weekday:'short',day:'numeric',month:'short',
-          hour:'numeric',minute:'2-digit',hour12:true
-        }).format(new Date(ends));
-      }catch(e){}
-    }
-    var dEl=root.querySelector('[data-lto="d"]');
-    var hEl=root.querySelector('[data-lto="h"]');
-    var mEl=root.querySelector('[data-lto="m"]');
-    if(!dEl||!hEl||!mEl){return;}
-    function pad(n){return (n<10?'0':'')+n;}
-    var iv=null;
-    function tick(){
-      var left=ends-Date.now();
-      if(left<=0){if(iv){clearInterval(iv);}hide();return;}
-      var totalMins=Math.floor(left/60000);
-      dEl.textContent=pad(Math.min(Math.floor(totalMins/1440),99));
-      hEl.textContent=pad(Math.floor((totalMins%1440)/60));
-      mEl.textContent=pad(totalMins%60);
-    }
-    tick();
-    iv=setInterval(tick,60000);
-    document.addEventListener('visibilitychange',function(){if(!document.hidden){tick();}});
-  }
-
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}
-  else{init();}
-})();
-  // ===== Catering =====
-(function(){
-  var section=document.querySelector('.catering');
-  if(!section)return;
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce)return;
-  // Stagger the tray-card reveals slightly, then clear the delay so hover transitions stay snappy
-  var cards=section.querySelectorAll('.tray.reveal');
-  Array.prototype.forEach.call(cards,function(card,i){
-    card.style.transitionDelay=(i*90)+'ms';
-    card.addEventListener('transitionend',function handler(e){
-      if(e.propertyName==='opacity'||e.propertyName==='transform'){
-        card.style.transitionDelay='';
-        card.removeEventListener('transitionend',handler);
-      }
-    });
-  });
-})();
-  // ===== IG wall =====
-(function(){
-  'use strict';
-  var root=document.querySelector('.igwall');
-  if(!root)return;
-  var reduce=false;
-  try{reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
-  var grid=root.querySelector('.igwall-grid');
-  var tiles=grid?Array.prototype.slice.call(grid.querySelectorAll('.ig-tile')):[];
-  if('IntersectionObserver' in window){
-    // Fallback reveal: covers the case where this fragment was injected after the
-    // site's global .reveal observer already ran. Duplicate .in adds are harmless.
-    var reveals=Array.prototype.slice.call(root.querySelectorAll('.reveal:not(.in)'));
-    if(reveals.length){
-      var rio=new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
-          if(en.isIntersecting){en.target.classList.add('in');rio.unobserve(en.target);}
-        });
-      },{threshold:.12});
-      reveals.forEach(function(el){rio.observe(el);});
-    }
-    // Staggered tile entrance — opted into via class so tiles stay visible if JS fails.
-    if(grid&&tiles.length&&!reduce){
-      root.classList.add('igwall-js');
-      tiles.forEach(function(t,i){t.style.transitionDelay=(i*70)+'ms';});
-      var tio=new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
-          if(en.isIntersecting){
-            tiles.forEach(function(t){t.classList.add('tin');});
-            tio.disconnect();
-          }
-        });
-      },{threshold:.15});
-      tio.observe(grid);
-      // Clear stagger delay once each tile has entered, so later transitions aren't lagged.
-      tiles.forEach(function(t){
-        t.addEventListener('transitionend',function done(e){
-          if(e.target!==t)return;
-          t.style.transitionDelay='0ms';
-          t.removeEventListener('transitionend',done);
-        });
-      });
-    }
-  }
-})();
-  // ===== Crunch Club =====
-(function(){
-  var form = document.getElementById('clubForm');
-  var input = document.getElementById('clubEmail');
-  var error = document.getElementById('clubError');
-  var status = document.getElementById('clubStatus');
-  if (!form || !input || !status) return;
-
-  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function showJoined(){
-    form.hidden = true;
-    status.textContent = "you're in the club, bro. eyes on your inbox.";
-  }
-
-  // Already a member from a previous visit? Skip straight to success.
-  try {
-    if (localStorage.getItem('crunchClub')) showJoined();
-  } catch (e) { /* storage unavailable — form still works, just won't persist */ }
-
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    var val = (input.value || '').trim();
-    if (!EMAIL_RE.test(val)) {
-      if (error) error.textContent = "Eh bro, that email doesn't look right — check it once more?";
-      input.setAttribute('aria-invalid', 'true');
-      input.focus();
-      return;
-    }
-    if (error) error.textContent = '';
-    input.removeAttribute('aria-invalid');
-    try {
-      localStorage.setItem('crunchClub', JSON.stringify({ joined: true, joinedAt: new Date().toISOString() }));
-    } catch (e) { /* private mode etc. — proceed with demo success anyway */ }
-    showJoined();
-  });
-})();
 </script>
 
 </body>

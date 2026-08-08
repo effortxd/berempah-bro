@@ -1,11 +1,14 @@
 # Berempah Bros — Brand Site
 
-Single-file brand website for [Berempah Bros](https://www.instagram.com/berempahbros/) — 16-spice ayam goreng berempah by MasterChef Singapore Season 2 winner Derek Cheong. Six stalls across two brands (Berempah Bros + Gepuk Guys).
+Multi-page brand website for [Berempah Bros](https://www.instagram.com/berempahbros/) — 16-spice ayam goreng berempah by MasterChef Singapore Season 2 winner Derek Cheong. Six stalls across two brands (Berempah Bros + Gepuk Guys).
 
 ## Files
 
-- `index.html` — the site (loads photos from `assets/`, fonts from Google Fonts)
-- `deploy.html` — fully self-contained build (all photos + fonts inlined; works offline, drop it on any static host)
+- `index.html` — home (brand structure & copy per the official site doc)
+- `story.html`, `menu.html`, `locations.html`, `careers.html`, `contact.html`, `news.html` — inner pages
+- `assets/site.css` — shared stylesheet
+- `variant-b/` — alternative dark design concept for comparison
+- `deploy.html` — self-contained snapshot of the home page (photos + fonts inlined)
 - `assets/` — brand photography, favicon, touch icon
 - `audit.mjs`, `qa*.mjs` — Playwright test scripts (`npm i -D playwright`, then `node audit.mjs`)
 
