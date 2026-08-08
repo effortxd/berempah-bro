@@ -5,7 +5,7 @@ Multi-page brand website for [Berempah Bros](https://www.instagram.com/berempahb
 ## Files
 
 - `index.html` — home (brand structure & copy per the official site doc)
-- `story.html`, `menu.html`, `locations.html`, `careers.html`, `contact.html`, `news.html` — inner pages
+- `story/`, `menu/`, `locations/`, `careers/`, `contact/`, `news/` — inner pages (each `index.html`); matching root `*.html` files are legacy redirect stubs kept for old links
 - `assets/site.css` — shared stylesheet
 - `deploy.html` — self-contained snapshot of the home page (photos + fonts inlined)
 - `assets/` — brand photography, favicon, touch icon
@@ -18,7 +18,7 @@ Search the HTML for `PLACEHOLDER` comments:
 1. Outlet No. 06 card — add the newest stall's address and hours
 2. Instagram wall tiles — swap profile links for real post URLs
 3. Catering tray cards — confirm contents with the kitchen
-4. Crunch Club form — wire to a real mailing service (currently a demo)
+4. Crunch Club form — signups deliver to the brand inbox via the form pipeline; migrate to a proper mailing service (Mailchimp/MailerLite) when campaigns start
 5. Promo module — `PROMO` config lives in the last `<script>` block (currently the real BEREMPAH6 first-order code)
 
 ## Deploy
