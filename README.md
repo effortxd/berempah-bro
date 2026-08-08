@@ -21,6 +21,18 @@ Search the HTML for `PLACEHOLDER` comments:
 4. Crunch Club form — wire to a real mailing service (currently a demo)
 5. Promo module — `PROMO` config lives in the last `<script>` block (currently the real BEREMPAH6 first-order code)
 
+## Deploy
+
+**DigitalOcean App Platform (production):** [![Deploy to DO](https://www.deploystatic.com/button.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/effortxd/berempah-bro/tree/main)
+
+1. Log in at cloud.digitalocean.com → **Create → App Platform**
+2. Connect GitHub, pick `effortxd/berempah-bro`, branch `main` — it auto-detects a static site (the `.do/app.yaml` spec preconfigures everything, region Singapore)
+3. Choose the **Starter (free static site)** plan → Create App — live in ~2 minutes at an `*.ondigitalocean.app` URL
+4. Custom domain: App → Settings → Domains → add `berempahbros.sg` (or `.com`), then create the CNAME record it shows at the domain registrar. TLS is automatic.
+5. Every push to `main` auto-deploys.
+
+After the custom domain is live, update the absolute URLs (canonical/og/sitemap/robots) from the github.io host to the new domain.
+
 ## GitHub Pages
 
 Settings → Pages → Deploy from branch → `main` / root. The site is `index.html`.

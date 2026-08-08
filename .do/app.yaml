@@ -1,0 +1,12 @@
+name: berempah-bros
+region: sgp
+static_sites:
+  - name: site
+    source_dir: /
+    output_dir: /
+    index_document: index.html
+    catchall_document: index.html
+    github:
+      repo: effortxd/berempah-bro
+      branch: main
+      deploy_on_push: true
