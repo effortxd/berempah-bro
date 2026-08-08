@@ -49,6 +49,10 @@ for (const a of anchors) {
   if (a.href.startsWith('#')) {
     const exists = await page.evaluate(sel => !!document.getElementById(sel), a.href.slice(1));
     if (!exists) issues.push(`DEAD ANCHOR: ${a.href} ("${a.text}")`);
+  } else if (/^[\w-]+\.html(#[\w-]+)?$/.test(a.href)) {
+    const file = a.href.split('#')[0];
+    const { existsSync } = await import('fs');
+    if (!existsSync(path.join(here, file))) issues.push(`DEAD PAGE LINK: ${a.href}`);
   } else if (a.href.startsWith('http')) {
     externals.add(a.href);
     if (a.targetBlank && !a.rel.includes('noopener')) issues.push(`MISSING noopener: ${a.href}`);
@@ -78,6 +82,9 @@ issues.push(...domChecks);
 // 4. interactions
 async function expect(cond, label) { if (!(await cond)) issues.push('INTERACTION FAIL: ' + label); }
 
+// interaction checks only apply to pages that have the elements
+const hasBuilder = await page.evaluate(() => !!document.getElementById('builderForm'));
+if (hasBuilder) {
 // order builder
 await page.locator('#menu').scrollIntoViewIfNeeded();
 const unagi = page.locator('#builderForm input[data-name="Unagi Berempah"]');
@@ -126,6 +133,7 @@ await expect(page.evaluate(() => {
   try { const v = JSON.parse(localStorage.getItem('crunchClub')); return v && v.joined === true && !('email' in v); }
   catch (e) { return false; }
 }), 'club: stores joined flag only, no email');
+}
 
 // mobile nav + overflow at 3 widths
 for (const w of [1280, 768, 375]) {
