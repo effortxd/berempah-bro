@@ -9,7 +9,15 @@
 <meta property="og:title" content="Berempah Bros — Spice. Crunch. Shiok.">
 <meta property="og:description" content="16-spice ayam goreng berempah by MasterChef Singapore winner Derek Cheong. 6 hawker stalls islandwide.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/hero.webp">
+<meta property="og:url" content="https://effortxd.github.io/berempah-bro/">
+<meta property="og:image" content="https://effortxd.github.io/berempah-bro/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://effortxd.github.io/berempah-bro/assets/og-image.jpg">
+<link rel="canonical" href="https://effortxd.github.io/berempah-bro/">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 721px)">
+<link rel="preload" as="image" href="assets/hero-mobile.webp" media="(max-width: 720px)">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -23,11 +31,11 @@
   "sameAs":["https://www.instagram.com/berempahbros/"],
   "menu":"https://berempahbros.oddle.me/",
   "location":[
-    {"@type":"FoodEstablishment","name":"Berempah Bros — Beauty World Food Centre","address":{"@type":"PostalAddress","streetAddress":"144 Upper Bukit Timah Road, #04-51","postalCode":"588177","addressCountry":"SG"}},
-    {"@type":"FoodEstablishment","name":"Berempah Bros — Bukit Canberra Hawker Centre","address":{"@type":"PostalAddress","streetAddress":"21 Canberra Link, #01-25","postalCode":"756973","addressCountry":"SG"},"telephone":"+65 9058 9674"},
-    {"@type":"FoodEstablishment","name":"Berempah Bros — Sengkang (Happy Hawkers)","address":{"@type":"PostalAddress","streetAddress":"267 Compassvale Link, #01-02 Stall 5","postalCode":"540267","addressCountry":"SG"},"telephone":"+65 9630 3690"},
-    {"@type":"FoodEstablishment","name":"Berempah Bros — Woodleigh Village Hawker Centre","address":{"@type":"PostalAddress","streetAddress":"202C Bidadari Park Drive, Woodleigh Village Hawker Centre","postalCode":"363202","addressCountry":"SG"}},
-    {"@type":"FoodEstablishment","name":"Gepuk Guys — Bedok (sister brand)","address":{"@type":"PostalAddress","streetAddress":"531 Bedok North Street 3, #01-680 Stall 3","postalCode":"460531","addressCountry":"SG"}}
+    {"@type":"FoodEstablishment","name":"Berempah Bros — Beauty World Food Centre","address":{"@type":"PostalAddress","streetAddress":"144 Upper Bukit Timah Road, #04-51","postalCode":"588177","addressCountry":"SG"},"geo":{"@type":"GeoCoordinates","latitude":1.3424126,"longitude":103.776539},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:30","closes":"20:30"}},
+    {"@type":"FoodEstablishment","name":"Berempah Bros — Bukit Canberra Hawker Centre","address":{"@type":"PostalAddress","streetAddress":"21 Canberra Link, #01-25","postalCode":"756973","addressCountry":"SG"},"telephone":"+65 9058 9674","geo":{"@type":"GeoCoordinates","latitude":1.4482633,"longitude":103.822763},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:45"}},
+    {"@type":"FoodEstablishment","name":"Berempah Bros — Sengkang (Happy Hawkers)","address":{"@type":"PostalAddress","streetAddress":"267 Compassvale Link, #01-02 Stall 5","postalCode":"540267","addressCountry":"SG"},"telephone":"+65 9630 3690","geo":{"@type":"GeoCoordinates","latitude":1.3837444,"longitude":103.897046}},
+    {"@type":"FoodEstablishment","name":"Berempah Bros — Woodleigh Village Hawker Centre","address":{"@type":"PostalAddress","streetAddress":"202C Bidadari Park Drive, Woodleigh Village Hawker Centre","postalCode":"363202","addressCountry":"SG"},"geo":{"@type":"GeoCoordinates","latitude":1.339791,"longitude":103.872013}},
+    {"@type":"FoodEstablishment","name":"Gepuk Guys — Bedok (sister brand)","address":{"@type":"PostalAddress","streetAddress":"531 Bedok North Street 3, #01-680 Stall 3","postalCode":"460531","addressCountry":"SG"},"geo":{"@type":"GeoCoordinates","latitude":1.3331299,"longitude":103.926153},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:30","closes":"22:30"}}
   ]
 }
 </script>
@@ -65,6 +73,12 @@
   img,svg{max-width:100%;display:block}
   a{color:inherit}
   :focus-visible{outline:3px solid var(--chili);outline-offset:3px;border-radius:2px}
+  .skip-link{
+    position:absolute;left:-9999px;top:0;z-index:200;
+    background:var(--ink);color:var(--paper);font-weight:700;
+    padding:12px 20px;text-decoration:none;
+  }
+  .skip-link:focus{left:0}
 
   /* film grain over everything */
   .grain{
@@ -680,6 +694,8 @@
   <rect width="100%" height="100%" filter="url(#n)"/>
 </svg>
 
+<a class="skip-link" href="#top">Skip to content</a>
+
 <header>
   <div class="container nav">
     <a class="logo" href="#top" aria-label="Berempah Bros home">
@@ -782,11 +798,11 @@
       <div class="polaroid-stack reveal">
         <div class="polaroid main">
           <span class="tape" aria-hidden="true"></span>
-          <img src="assets/stall.webp" alt="The Berempah Bros stall at the hawker centre, warm lights and steam rising from the fryer" loading="lazy">
+          <img src="assets/stall.webp" srcset="assets/sm/stall.webp 800w, assets/stall.webp 1280w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="The Berempah Bros stall at the hawker centre, warm lights and steam rising from the fryer" loading="lazy">
           <span class="cap">the stall, somewhere past dinner rush</span>
         </div>
         <div class="polaroid small">
-          <img src="assets/crunch.webp" alt="Extreme close-up of the crispy spiced chicken crust with garlic and sakura ebi crumbs" loading="lazy">
+          <img src="assets/crunch.webp" srcset="assets/sm/crunch.webp 800w, assets/crunch.webp 1024w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Extreme close-up of the crispy spiced chicken crust with garlic and sakura ebi crumbs" loading="lazy">
           <span class="cap">the crunch™</span>
         </div>
       </div>
@@ -835,7 +851,7 @@
       <div class="build-grid">
         <div class="build-photos reveal">
           <figure>
-            <img src="assets/crunch.webp" alt="Macro shot of craggy fried crust with crumbs" loading="lazy">
+            <img src="assets/crunch.webp" srcset="assets/sm/crunch.webp 800w, assets/crunch.webp 1024w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Macro shot of craggy fried crust with crumbs" loading="lazy">
             <figcaption>zoom in on the crunch</figcaption>
           </figure>
           <figure>
@@ -923,7 +939,7 @@
       <div class="menu-grid">
         <article class="chit reveal">
           <div class="chit-photo">
-            <img src="assets/ayam.webp" alt="Ayam Berempah — crispy spiced fried chicken on coconut rice" loading="lazy">
+            <img src="assets/ayam.webp" srcset="assets/sm/ayam.webp 800w, assets/ayam.webp 1149w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Ayam Berempah — crispy spiced fried chicken on coconut rice" loading="lazy">
             <span class="chit-price">$9.00</span>
           </div>
           <div class="chit-body">
@@ -934,7 +950,7 @@
         </article>
         <article class="chit reveal">
           <div class="chit-photo">
-            <img src="assets/pork.webp" alt="Pork Berempah — crispy spiced pork on coconut rice" loading="lazy">
+            <img src="assets/pork.webp" srcset="assets/sm/pork.webp 800w, assets/pork.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Pork Berempah — crispy spiced pork on coconut rice" loading="lazy">
             <span class="chit-price">$10.20</span>
           </div>
           <div class="chit-body">
@@ -945,7 +961,7 @@
         </article>
         <article class="chit reveal">
           <div class="chit-photo">
-            <img src="assets/fish.webp" alt="Fish Berempah — golden fried fish on coconut rice" loading="lazy">
+            <img src="assets/fish.webp" srcset="assets/sm/fish.webp 800w, assets/fish.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Fish Berempah — golden fried fish on coconut rice" loading="lazy">
             <span class="chit-price">$10.20</span>
           </div>
           <div class="chit-body">
@@ -956,7 +972,7 @@
         </article>
         <article class="chit reveal">
           <div class="chit-photo">
-            <img src="assets/unagi.webp" alt="Unagi Berempah — glazed eel with spiced crust on coconut rice" loading="lazy">
+            <img src="assets/unagi.webp" srcset="assets/sm/unagi.webp 800w, assets/unagi.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Unagi Berempah — glazed eel with spiced crust on coconut rice" loading="lazy">
             <span class="chit-price">$14.40</span>
           </div>
           <div class="chit-body">
@@ -1024,7 +1040,7 @@
         <span class="catering-hand">one tray also can, ten trays also can</span>
       </div>
       <figure class="catering-photo reveal">
-        <img src="assets/feast.webp" alt="The Berempah Bros Feast For 2 — two crumb-topped proteins, begedil, otah, achar and coconut rice on a rattan tray" loading="lazy">
+        <img src="assets/feast.webp" srcset="assets/sm/feast.webp 800w, assets/feast.webp 1361w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="The Berempah Bros Feast For 2 — two crumb-topped proteins, begedil, otah, achar and coconut rice on a rattan tray" loading="lazy">
         <figcaption>same fryer, just bigger portions</figcaption>
       </figure>
     </div>
@@ -1299,7 +1315,7 @@
     <!-- PLACEHOLDER: edit before launch — swap tiles/captions for real @berempahbros post links -->
     <div class="igwall-grid reveal">
       <a class="ig-tile ig-wide" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/stall.webp" alt="Dinner rush at the Berempah Bros hawker stall, trays of ayam berempah heading out" loading="lazy">
+        <img src="assets/stall.webp" srcset="assets/sm/stall.webp 800w, assets/stall.webp 1280w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Dinner rush at the Berempah Bros hawker stall, trays of ayam berempah heading out" loading="lazy">
         <span class="sr">(opens Instagram in a new tab)</span>
         <span class="ig-ov" aria-hidden="true">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
@@ -1308,7 +1324,7 @@
       </a>
 
       <a class="ig-tile pol tilt-l" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/crunch.webp" alt="Macro close-up of the fried garlic, breadcrumb, kerisik and sakura ebi crunch on the chicken crust" loading="lazy">
+        <img src="assets/crunch.webp" srcset="assets/sm/crunch.webp 800w, assets/crunch.webp 1024w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Macro close-up of the fried garlic, breadcrumb, kerisik and sakura ebi crunch on the chicken crust" loading="lazy">
         <span class="sr">(opens Instagram in a new tab)</span>
         <span class="ig-cap" aria-hidden="true">the crunch, no filter</span>
         <span class="ig-ov" aria-hidden="true">
@@ -1318,7 +1334,7 @@
       </a>
 
       <a class="ig-tile" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/ayam.webp" alt="Ayam berempah set with coconut rice and sambal belachan" loading="lazy">
+        <img src="assets/ayam.webp" srcset="assets/sm/ayam.webp 800w, assets/ayam.webp 1149w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Ayam berempah set with coconut rice and sambal belachan" loading="lazy">
         <span class="sr">(opens Instagram in a new tab)</span>
         <span class="ig-ov" aria-hidden="true">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
@@ -1336,7 +1352,7 @@
       </a>
 
       <a class="ig-tile pol tilt-r" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
-        <img src="assets/unagi.webp" alt="Unagi berempah plate finished with the signature spice crunch" loading="lazy">
+        <img src="assets/unagi.webp" srcset="assets/sm/unagi.webp 800w, assets/unagi.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Unagi berempah plate finished with the signature spice crunch" loading="lazy">
         <span class="sr">(opens Instagram in a new tab)</span>
         <span class="ig-cap" aria-hidden="true">unagi glow-up</span>
         <span class="ig-ov" aria-hidden="true">
