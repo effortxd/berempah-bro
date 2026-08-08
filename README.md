@@ -7,7 +7,6 @@ Multi-page brand website for [Berempah Bros](https://www.instagram.com/berempahb
 - `index.html` — home (brand structure & copy per the official site doc)
 - `story.html`, `menu.html`, `locations.html`, `careers.html`, `contact.html`, `news.html` — inner pages
 - `assets/site.css` — shared stylesheet
-- `variant-b/` — alternative dark design concept for comparison
 - `deploy.html` — self-contained snapshot of the home page (photos + fonts inlined)
 - `assets/` — brand photography, favicon, touch icon
 - `audit.mjs`, `qa*.mjs` — Playwright test scripts (`npm i -D playwright`, then `node audit.mjs`)
