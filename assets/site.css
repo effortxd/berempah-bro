@@ -1,3 +1,8 @@
+@font-face{
+  font-family:'Meaty Bliss';
+  src:url("MeatyBliss.woff2") format("woff2"),url("MeatyBliss.otf") format("opentype");
+  font-weight:400;font-style:normal;font-display:swap;
+}
 :root{
     --paper:#F5EBD8;
     --paper-2:#EEDFC4;
@@ -12,7 +17,7 @@
     --orange-light:#FCA91B;
     --pandan:#274D33;
     --line:#D9C6A2;
-    --font-display:'Anton',sans-serif;
+    --font-display:'Meaty Bliss',sans-serif;
     --font-body:'Karla',sans-serif;
     --font-hand:'Caveat',cursive;
     --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:64px;--s7:96px;
@@ -108,7 +113,7 @@
   }
   .hero-inner{position:relative;z-index:2;width:100%;padding:140px var(--s3) 0}
   .hero h1{
-    font-size:clamp(3.4rem,11vw,9rem);color:var(--paper);
+    font-size:clamp(2.6rem,8.5vw,6.8rem);color:var(--paper);
     text-shadow:4px 4px 0 rgba(40,20,20,.55);
   }
   .hero h1 .line2{color:var(--orange-light);display:block}
@@ -142,7 +147,7 @@
 
   /* ================= STORY ================= */
   .story-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s6);align-items:center}
-  .story h2,.section-head h2{font-size:clamp(2.4rem,5vw,4rem);margin:var(--s2) 0 var(--s3)}
+  .story h2,.section-head h2{font-size:clamp(2rem,4.2vw,3.3rem);margin:var(--s2) 0 var(--s3)}
   .story p{color:var(--ink-70);margin-bottom:var(--s2);max-width:36rem}
   .story p b{color:var(--ink)}
   .polaroid-stack{position:relative;padding:20px 0 40px}
@@ -345,7 +350,7 @@
     background:linear-gradient(180deg,var(--orange-deep),var(--orange-light));color:var(--ink);text-align:center;position:relative;overflow:hidden;
     border-top:2px solid var(--ink);
   }
-  .cta h2{color:#fff;font-size:clamp(2.8rem,7vw,5.5rem);margin-bottom:var(--s2);text-shadow:3px 3px 0 rgba(40,20,20,.5)}
+  .cta h2{color:#fff;font-size:clamp(2.2rem,5.5vw,4.2rem);margin-bottom:var(--s2);text-shadow:3px 3px 0 rgba(40,20,20,.5)}
   .cta .hand{font-size:1.6rem;color:#6B3A0C;display:block;margin-bottom:var(--s4);transform:rotate(-1.5deg)}
   .cta-btns{display:flex;justify-content:center;gap:var(--s2);flex-wrap:wrap}
 
@@ -490,7 +495,7 @@
 .catering{background:var(--ink);color:var(--paper);position:relative}
 .catering .kicker{color:var(--turmeric)}
 .catering .kicker::before{background:var(--turmeric)}
-.catering h2{color:var(--paper);font-size:clamp(2.4rem,5vw,4rem);margin-top:var(--s2)}
+.catering h2{color:var(--paper);font-size:clamp(2rem,4.2vw,3.3rem);margin-top:var(--s2)}
 .catering .catering-head{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s6);align-items:center;margin-bottom:var(--s6)}
 .catering .catering-intro p{color:#CDB995;max-width:34rem;margin-top:var(--s3)}
 .catering .catering-intro p b{color:var(--paper)}
@@ -531,7 +536,7 @@
   /* ================= IG WALL ================= */
 .igwall{position:relative}
 .igwall .igwall-head{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s5)}
-.igwall .igwall-head h2{font-size:clamp(2.4rem,5vw,4rem);margin-top:var(--s2)}
+.igwall .igwall-head h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-top:var(--s2)}
 .igwall .igwall-note{font-size:1.45rem;color:var(--ink-70);transform:rotate(-2deg);max-width:17rem;line-height:1.2}
 .igwall .igwall-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:235px;gap:var(--s2)}
 .igwall .ig-tile{position:relative;display:block;height:100%;border:2px solid var(--ink);background:#2A1708;overflow:hidden;text-decoration:none;--tilt:0deg;transform:rotate(var(--tilt))}
@@ -569,7 +574,7 @@
 .club{background:var(--paper-2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
 .club [hidden]{display:none!important}
 .club-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s6);align-items:center}
-.club-copy h2{font-size:clamp(2.4rem,5vw,4rem);margin:var(--s2) 0 var(--s3)}
+.club-copy h2{font-size:clamp(2rem,4.2vw,3.3rem);margin:var(--s2) 0 var(--s3)}
 .club-lede{color:var(--ink-70);max-width:34rem;margin-bottom:var(--s4)}
 .club-lede b{color:var(--ink)}
 .club-signup{max-width:34rem}
