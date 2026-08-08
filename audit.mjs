@@ -4,6 +4,7 @@ import path from 'path';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const target = process.argv[2] || 'index.html';
+const target0 = target;
 const url = 'file:///' + path.join(here, target).split(path.sep).join('/');
 const issues = [];
 const browser = await chromium.launch();
@@ -49,10 +50,15 @@ for (const a of anchors) {
   if (a.href.startsWith('#')) {
     const exists = await page.evaluate(sel => !!document.getElementById(sel), a.href.slice(1));
     if (!exists) issues.push(`DEAD ANCHOR: ${a.href} ("${a.text}")`);
-  } else if (/^[\w-]+\.html(#[\w-]+)?$/.test(a.href)) {
-    const file = a.href.split('#')[0];
+  } else if (/^(\.\.\/)?([\w-]+\/)?(#[\w-]+)?$/.test(a.href) || /^[\w-]+\.html(#[\w-]+)?$/.test(a.href) || a.href === './' || a.href === '../') {
+    const clean = a.href.split('#')[0];
     const { existsSync } = await import('fs');
-    if (!existsSync(path.join(here, file))) issues.push(`DEAD PAGE LINK: ${a.href}`);
+    let target;
+    if (clean === '' ) target = null;
+    else if (clean === './' || clean === '../') target = path.join(here, path.dirname(target0), clean, 'index.html');
+    else if (clean.endsWith('.html')) target = path.join(here, path.dirname(target0), clean);
+    else target = path.join(here, path.dirname(target0), clean, 'index.html');
+    if (target && !existsSync(target)) issues.push(`DEAD PAGE LINK: ${a.href}`);
   } else if (a.href.startsWith('mailto:') || a.href.startsWith('tel:')) {
     if (!/^mailto:[^@\s]+@[^@\s]+\.[^@\s?]+(\?.*)?$/.test(a.href) && a.href.startsWith('mailto:')) issues.push(`MALFORMED MAILTO: ${a.href}`);
   } else if (a.href.startsWith('http')) {
