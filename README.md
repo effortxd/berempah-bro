@@ -23,7 +23,7 @@ Search the HTML for `PLACEHOLDER` comments:
 
 ## Deploy
 
-**DigitalOcean App Platform (production):** [![Deploy to DO](https://www.deploystatic.com/button.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/effortxd/berempah-bro/tree/main)
+**DigitalOcean App Platform (production):** [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/effortxd/berempah-bro/tree/main)
 
 1. Log in at cloud.digitalocean.com → **Create → App Platform**
 2. Connect GitHub, pick `effortxd/berempah-bro`, branch `main` — it auto-detects a static site (the `.do/app.yaml` spec preconfigures everything, region Singapore)
