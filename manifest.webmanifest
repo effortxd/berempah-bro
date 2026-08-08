@@ -1,0 +1,21 @@
+{
+  "name": "Berempah Bros — Spice. Crunch. Shiok.",
+  "short_name": "Berempah Bros",
+  "description": "Born in Singapore. Signature ayam berempah, coconut rice, sambal belachan. 6 stalls islandwide + delivery.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5EBD8",
+  "theme_color": "#BE1E0D",
+  "lang": "en-SG",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Order Delivery", "url": "https://berempahbros.oddle.me/" },
+    { "name": "Menu", "url": "./menu.html" },
+    { "name": "Locations", "url": "./locations.html" }
+  ]
+}

@@ -16,6 +16,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://effortxd.github.io/berempah-bro/assets/og-image.jpg">
 <link rel="canonical" href="https://effortxd.github.io/berempah-bro/story.html">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#BE1E0D">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -190,7 +192,7 @@
 
     <!-- PLACEHOLDER: edit before launch — swap tiles/captions for real @berempahbros post links -->
     <div class="igwall-grid reveal">
-      <a class="ig-tile ig-wide" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
+      <a class="ig-tile ig-wide" href="https://www.instagram.com/reel/DXg53nBDwD0/" target="_blank" rel="noopener">
         <img src="assets/stall.webp" srcset="assets/sm/stall.webp 800w, assets/stall.webp 1280w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Dinner rush at the Berempah Bros hawker stall, trays of ayam berempah heading out" loading="lazy">
         <span class="sr">(opens Instagram in a new tab)</span>
         <span class="ig-ov" aria-hidden="true">
@@ -199,7 +201,7 @@
         </span>
       </a>
 
-      <a class="ig-tile pol tilt-l" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
+      <a class="ig-tile pol tilt-l" href="https://www.instagram.com/reel/DTXV0oTk_et/" target="_blank" rel="noopener">
         <img src="assets/crunch.webp" srcset="assets/sm/crunch.webp 800w, assets/crunch.webp 1024w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Macro close-up of the fried garlic, breadcrumb, kerisik and sakura ebi crunch on the chicken crust" loading="lazy">
         <span class="sr">(opens Instagram in a new tab)</span>
         <span class="ig-cap" aria-hidden="true">the crunch, no filter</span>
@@ -227,7 +229,7 @@
         </span>
       </a>
 
-      <a class="ig-tile pol tilt-r" href="https://www.instagram.com/berempahbros/" target="_blank" rel="noopener">
+      <a class="ig-tile pol tilt-r" href="https://www.instagram.com/reel/DamvcrBy9om/" target="_blank" rel="noopener">
         <img src="assets/unagi.webp" srcset="assets/sm/unagi.webp 800w, assets/unagi.webp 1089w" sizes="(max-width: 720px) 92vw, (max-width: 1024px) 46vw, 420px" alt="Unagi berempah plate finished with the signature spice crunch" loading="lazy">
         <span class="sr">(opens Instagram in a new tab)</span>
         <span class="ig-cap" aria-hidden="true">unagi glow-up</span>
@@ -384,5 +386,10 @@
 })();
 </script>
 
+<script>
+  if ('serviceWorker' in navigator) {
+    addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
+  }
+</script>
 </body>
 </html>

@@ -12,6 +12,8 @@
 <meta property="og:url" content="https://effortxd.github.io/berempah-bro/news.html">
 <meta property="og:image" content="https://effortxd.github.io/berempah-bro/assets/og-image.jpg">
 <link rel="canonical" href="https://effortxd.github.io/berempah-bro/news.html">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#BE1E0D">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,7 +147,7 @@
       <div class="post-body">
         <p>Our sister stall is live. <b>Gepuk Guys</b> serves Indonesian-inspired gepuk — turmeric-marinated fried chicken, lightly smashed, with cashew-nut sambal — from Stall 3, Jofa Coffeeshop, <b>531 Bedok North Street 3</b>, daily 10:30am–10:30pm.</p>
         <p>Mains from $9.90 (Ayam Berempah Gepuk), with grilled squid, unagi and duck confit on the roster. <b>No pork, no lard</b> at this one. Full story on <a href="https://eatbook.sg/gepuk-guys/" target="_blank" rel="noopener">Eatbook</a>.</p>
-        <p class="post-cta"><a class="btn btn-paper" href="https://www.instagram.com/gepukguys.sg/" target="_blank" rel="noopener">Follow @gepukguys.sg</a></p>
+        <p class="post-cta"><a class="btn btn-chili" href="https://www.instagram.com/reel/DamvcrBy9om/" target="_blank" rel="noopener">Watch The Grand Opening</a> <a class="btn btn-paper" href="https://www.instagram.com/gepukguys.sg/" target="_blank" rel="noopener">Follow @gepukguys.sg</a></p>
       </div>
     </article>
 
@@ -262,5 +264,10 @@
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 
+<script>
+  if ('serviceWorker' in navigator) {
+    addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
+  }
+</script>
 </body>
 </html>
