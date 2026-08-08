@@ -165,7 +165,11 @@
         <h2 id="club-title">Get In The<br>Crunch Club</h2>
         <p class="club-lede">One email once in a while, <b>zero spam — only sambal.</b> Be first to know when a new stall drops, and first in line when the secret menu goes live. Free to join, no catch one.</p>
         <div class="club-signup">
-          <form class="club-form" id="clubForm" novalidate>
+          <form class="club-form" id="clubForm" action="https://formsubmit.co/berempahbros.general@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Crunch Club signup">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://effortxd.github.io/berempah-bro/contact/?joined=1">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <label class="club-label" for="clubEmail">Your email, bro</label>
             <div class="club-row">
               <input class="club-input" type="email" id="clubEmail" name="email" autocomplete="email" placeholder="makan.kaki@example.com" required aria-describedby="clubError clubDemo">
@@ -180,7 +184,7 @@
         </div>
         <!-- PLACEHOLDER: edit before launch — confirm actual member perks -->
         <p class="club-fine">Perks: early word on new outlets + secret menu drops before they hit the 'gram.</p>
-        <p class="club-fine club-demo" id="clubDemo">Demo signup — connects to no mailing service yet.</p>
+        <p class="club-fine club-demo" id="clubDemo">By joining you agree to receive occasional emails from Berempah Bros. Unsubscribe any time — just reply and say so.</p>
       </div>
       <!-- PLACEHOLDER: edit before launch — membership card mock, member number is decorative -->
       <div class="club-card-wrap reveal" aria-hidden="true">
@@ -295,42 +299,31 @@
 
 
   // ===== Crunch Club =====
-(function(){
-  var form = document.getElementById('clubForm');
-  var input = document.getElementById('clubEmail');
-  var error = document.getElementById('clubError');
-  var status = document.getElementById('clubStatus');
-  if (!form || !input || !status) return;
-
-  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function showJoined(){
-    form.hidden = true;
-    status.textContent = "you're in the club, bro. eyes on your inbox.";
-  }
-
-  // Already a member from a previous visit? Skip straight to success.
-  try {
-    if (localStorage.getItem('crunchClub')) showJoined();
-  } catch (e) { /* storage unavailable — form still works, just won't persist */ }
-
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    var val = (input.value || '').trim();
-    if (!EMAIL_RE.test(val)) {
-      if (error) error.textContent = "Eh bro, that email doesn't look right — check it once more?";
-      input.setAttribute('aria-invalid', 'true');
-      input.focus();
-      return;
+  (function(){
+    var form = document.getElementById('clubForm');
+    var input = document.getElementById('clubEmail');
+    var error = document.getElementById('clubError');
+    var status = document.getElementById('clubStatus');
+    if (!form || !input || !status) return;
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (new URLSearchParams(location.search).has('joined')) {
+      form.hidden = true;
+      status.textContent = "you're in the club, bro. eyes on your inbox.";
+      status.scrollIntoView({block:'center'});
     }
-    if (error) error.textContent = '';
-    input.removeAttribute('aria-invalid');
-    try {
-      localStorage.setItem('crunchClub', JSON.stringify({ joined: true, joinedAt: new Date().toISOString() }));
-    } catch (e) { /* private mode etc. — proceed with demo success anyway */ }
-    showJoined();
-  });
-})();
+    form.addEventListener('submit', function(ev){
+      var val = (input.value || '').trim();
+      if (!EMAIL_RE.test(val)) {
+        ev.preventDefault();
+        if (error) error.textContent = "Eh bro, that email doesn't look right — check it once more?";
+        input.setAttribute('aria-invalid', 'true');
+        input.focus();
+        return;
+      }
+      if (error) error.textContent = '';
+      input.removeAttribute('aria-invalid');
+    });
+  })();
 </script>
 
 </body>

@@ -132,19 +132,16 @@ if (hoursCards > 0) {
 
 if (await page.evaluate(() => !!document.getElementById('clubForm'))) {
   await page.locator('#club').scrollIntoViewIfNeeded();
-  await page.evaluate(() => localStorage.removeItem('crunchClub'));
-  await page.reload({ waitUntil: 'load' });
-  await page.locator('#club').scrollIntoViewIfNeeded();
   await page.locator('#clubEmail').fill('not-an-email');
   await page.locator('#clubForm button[type="submit"]').click();
   await expect(page.evaluate(() => document.getElementById('clubError').textContent.length > 0), 'club: invalid email shows error');
-  await page.locator('#clubEmail').fill('bro@example.com');
-  await page.locator('#clubForm button[type="submit"]').click();
-  await expect(page.evaluate(() => document.getElementById('clubStatus').textContent.includes('in the club')), 'club: valid email shows success');
   await expect(page.evaluate(() => {
-    try { const v = JSON.parse(localStorage.getItem('crunchClub')); return v && v.joined === true && !('email' in v); }
-    catch (e) { return false; }
-  }), 'club: stores joined flag only, no email');
+    const f = document.getElementById('clubForm');
+    return f.action.includes('formsubmit.co') &&
+           !!f.querySelector('input[name="_honey"]') &&
+           !!f.querySelector('input[name="_captcha"][value="true"]') &&
+           !!f.querySelector('input[name="_subject"]');
+  }), 'club: real signup endpoint with honeypot + captcha + subject');
 }
 
 // mobile nav + overflow at 3 widths
