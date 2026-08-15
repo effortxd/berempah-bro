@@ -5,6 +5,26 @@ not by technical interest.
 
 ---
 
+## Timeline at a glance
+
+> **Do this first — the site is currently offline.** The repo is public again, but
+> GitHub Pages needs re-enabling: **Settings → Pages → Deploy from branch →
+> `gh-pages` / root**. Until then the URL returns 404.
+
+| When | Focus | Who | Effort |
+|------|-------|-----|--------|
+| **This week** | Bring the site back online; activate forms; turn on GA4; claim Search Console + Business Profiles; send the missing content (6th outlet, IG links, catering sign-off) | Client | ~1 hour |
+| **Week 1–2** | Drop in supplied content; turn CI on; custom domain; move Crunch Club to a real mailing list | Dev | ~2 days |
+| **Weeks 3–4** | Outlet-specific promotions (data layer already supports it) | Dev | 2–3 days |
+| **Month 2 — decision point** | Review two weeks of real GA4 data before committing the next build | Both | — |
+| **Month 2–3** | Grow: loyalty stamp-card pilot → Oddle loyalty module → evaluate direct ordering (cheapest first) | Both | scoped by data |
+| **Optional / later** | Installable PWA (~30 min); push notifications (skip); custom loyalty backend (only if pilot outgrown) | Dev | as needed |
+| **At handover** | Transfer repo to a brand GitHub org, brand-owned accounts, 2FA, branch protection | Both | ongoing |
+
+A one-page visual of this is kept alongside the project for sharing with the brand.
+
+---
+
 ## Now live (this phase)
 
 | Capability | What it does for the business |
@@ -23,6 +43,9 @@ not by technical interest.
 
 These need accounts, not engineering. Highest value for the least work.
 
+0. **Bring the site back online.** The repo is public but GitHub Pages is off —
+   re-enable it (Settings → Pages → `gh-pages` / root). Nothing else matters
+   while the URL 404s.
 1. **Activate the forms.** One click in the FormSubmit email sitting in
    `berempahbros.general@gmail.com`. Until then contact, catering and Crunch Club
    submissions don't deliver. *This is the single highest-value action outstanding.*
