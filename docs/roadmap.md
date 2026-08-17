@@ -21,8 +21,6 @@ not by technical interest.
 | **Optional / later** | Installable PWA (~30 min); push notifications (skip); custom loyalty backend (only if pilot outgrown) | Dev | as needed |
 | **At handover** | Transfer repo to a brand GitHub org, brand-owned accounts, 2FA, branch protection | Both | ongoing |
 
-A one-page visual of this is kept alongside the project for sharing with the brand.
-
 ---
 
 ## Now live (this phase)
@@ -35,7 +33,7 @@ A one-page visual of this is kept alongside the project for sharing with the bra
 | Conversion tracking | Order clicks, directions, calls, promo clicks, enquiries and signups are measurable |
 | Structured catering enquiries | Date, headcount, outlet and occasion arrive together instead of a DM thread |
 | Automated test + CI | A broken link, price format or mobile overflow blocks the deploy |
-| Documentation + agent workflows | The next person — human or AI — can extend this safely |
+| Runbooks in docs/ | Adding an outlet, changing the menu or shipping a change is a written step-by-step |
 
 ---
 
@@ -145,8 +143,7 @@ To transfer to Berempah Bros ownership with the developer staying on as collabor
 now printed on a public site — treat it as production infrastructure.
 
 **Assets:** brand photography and the Meaty Bliss font come from the brand's own
-packages. Confirm the font licence covers web embedding before a wide campaign
-(see CLAUDE.md → Known constraints).
+packages. Confirm the font licence covers web embedding before a wide campaign.
 
 ---
 
